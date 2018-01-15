@@ -1,0 +1,13 @@
+---
+layout: default
+---
+
+<article class="inmueble">
+  <header>
+    <h1>{{ page.title}}</h1>
+    <p>Precio: {{ page.price | number_of_words | intcomma: '.' }}€</p>
+  </header>
+
+  {{ content }}
+
+</article>
