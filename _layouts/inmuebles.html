@@ -5,7 +5,7 @@ layout: default
 <article class="inmueble">
   <header>
     <h1>{{ page.title}}</h1>
-    <p>Precio: {{ page.price | number_of_words | intcomma: '.' }}€</p>
+    <p>Precio: {{ page.price | page.price.size | intcomma: '.' }}€</p>
   </header>
 
   {{ content }}
