@@ -15,4 +15,25 @@ layout: default
   </picture>
   {{ content }}
 
+  {% if page.basic-data %}
+  {% assig bd = page.basic-data %}
+  <h2>Datos básicos</h2>
+  <ul>
+    {% if bd.superficie-construida %}<li>bd.superficie-construida</li>{% endif %}
+    {% if bd.state %}<li>bd.state</li>{% endif %}
+  </ul>
+  {% endif %}
+
+  {% if page.muebles-acabados %}
+  {% endif %}
+
+  {% if page.equipamineto %}
+  {% endif %}
+
+  {% if page.exteriores %}
+  {% endif %}
+
+  {% if page.certificado-energetico %}
+  {% endif %}
+
 </article>
