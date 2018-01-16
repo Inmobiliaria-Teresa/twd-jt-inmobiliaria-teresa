@@ -19,8 +19,8 @@ layout: default
   {% assign bd = page.basic-data %}
   <h2>Datos básicos</h2>
   <ul>
-    {% unless bd.superficie-construida == blank %}<li>{{ bd.superficie-construida }} m<sup>2</sup></li>{% endunless %}
-    {% unless bd.state == blank %}<li>{{ bd.state }}</li>{% endunless %}
+    {% unless bd.superficie-construida == '' %}<li>{{ bd.superficie-construida }} m<sup>2</sup></li>{% endunless %}
+    {% unless bd.state == '' %}<li>{{ bd.state }}</li>{% endunless %}
   </ul>
   {% endif %}
 
