@@ -10,8 +10,8 @@ layout: default
   </header>
   {% assign gallery = page.gallery %}
   <picture>
-    <srcset src="{{ gallery[0] | absolute_url }}">
-    <img src="{{ gallery[0] | absolute_url }}" alt="{{ page.title }} - imagen principal">
+    <srcset src="{{ gallery[0].image | absolute_url }}">
+    <img src="{{ gallery[0].image | absolute_url }}" alt="{{ page.title }} - imagen principal">
   </picture>
   {{ content }}
 
