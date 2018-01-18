@@ -8,34 +8,64 @@ layout: default
     <p>{{ page.address.city }}</p>
     <p>Precio: {{ page.price | intcomma: '.' }}€</p>
   </header>
-  {% assign gallery = page.gallery %}
-  {% assign imagen = gallery[0].image | split: '/' | last %}
-  <picture>
-    <source media="(max-width: 20em)" srcset="{{ imagen | prepend: 'assets/images/thumbs/' | absolute_url }}">
-    <source media="(max-width: 40em)" srcset="{{ imagen | prepend: 'assets/images/medium/' | absolute_url }}">
-    <img src="{{ imagen | prepend: 'assets/images/medium/' | absolute_url }}" alt="{{ page.title }} - imagen principal">
-  </picture>
-  {{ content }}
+  <main>
+    {% assign gallery = page.gallery %}
+    {% assign imagen = gallery[0].image | split: '/' | last %}
 
-  {% if page.basic-data %}
-  {% assign bd = page.basic-data %}
-  <h2>Datos básicos</h2>
-  <ul>
-    {% unless bd.superficie-construida == '' %}<li>{{ bd.superficie-construida }} m<sup>2</sup></li>{% endunless %}
-    {% unless bd.state == '' %}<li>{{ bd.state }}</li>{% endunless %}
-  </ul>
-  {% endif %}
+    <section>
+      <picture>
+        <source media="(max-width: 20em)" srcset="{{ imagen | prepend: 'assets/images/thumbs/' | absolute_url }}">
+        <source media="(max-width: 40em)" srcset="{{ imagen | prepend: 'assets/images/medium/' | absolute_url }}">
+        <img src="{{ imagen | prepend: 'assets/images/medium/' | absolute_url }}" alt="{{ page.title }} - imagen principal">
+      </picture>
+    </section>
 
-  {% if page.muebles-acabados %}
-  {% endif %}
+    {{ content }}
 
-  {% if page.equipamineto %}
-  {% endif %}
+    {% if page.basic-data %}
+    {% assign bd = page.basic-data %}
+    <h2>Datos básicos</h2>
+    <ul>
+      {% unless bd.superficie-construida == '' %}<li>{{ bd.superficie-construida }} m<sup>2</sup></li>{% endunless %}
+      {% unless bd.state == '' %}<li>{{ bd.state }}</li>{% endunless %}
+    </ul>
+    {% endif %}
 
-  {% if page.exteriores %}
-  {% endif %}
+    {% if page.muebles-acabados %}
+    <h2>Muebles y acabados</h2>
+    <ul>
+    {% for item in page.muebles-acabados %}
+      <li>{{ item.item }}</li>
+    {% endfor %}
+    </ul>
+    {% endif %}
 
-  {% if page.certificado-energetico %}
-  {% endif %}
+    {% if page.equipamiento %}
+    <h2>Equipamiento e instalaciones</h2>
+    <ul>
+    {% for item in page.equipamiento %}
+      <li>{{ item.item }}</li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+
+    {% if page.exteriores %}
+    <h2>Exteriores</h2>
+    <ul>
+    {% for item in page.exteriores %}
+      <li>{{ item.item }}</li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+
+    {% if page.certificado-energetico %}
+    <h2>Certificado energético</h2>
+    <ul>
+    {% for item in page.certificado-energetico %}
+      <li>{{ item.item }}</li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+  </main>
 
 </article>
