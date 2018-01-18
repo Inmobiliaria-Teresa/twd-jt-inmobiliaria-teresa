@@ -5,9 +5,16 @@
 
   <body>
 
-    <h1>This is the Home Page</h1>
+    {% include navigation.html %}
 
-    {{ content }}
+    <article>
+      <header>
+       <h1>This is the Home Page</h1>
+      </header>
+
+      <main>
+        {{ content }}
+      </main>
 
     {% for inc in page.foot-includes %}
       {% include {{ inc }} %}
