@@ -11,7 +11,7 @@ layout: default
   {% assign gallery = page.gallery %}
   {% assign imagen = gallery[0].image | split: '/' | last %}
   <picture>
-    <srcset src="{{ imagen | prepend: 'assets/images/medium/' | absolute_url }}">
+    <source srcset="{{ imagen | prepend: 'assets/images/medium/' | absolute_url }}">
     <img src="{{ imagen | prepend: 'assets/images/medium/' | absolute_url }}" alt="{{ page.title }} - imagen principal">
   </picture>
   {{ content }}
