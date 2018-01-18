@@ -1,1 +1,15 @@
-{{ content }}
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {{ content }}
+
+    {% for inc in page.foot-includes %}
+      {% include {{ inc }} %}
+    {% endfor %}
+
+  </body>
+</html>
