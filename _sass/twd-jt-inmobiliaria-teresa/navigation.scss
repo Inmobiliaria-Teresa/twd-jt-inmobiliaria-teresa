@@ -1,11 +1,30 @@
-.enhanced .nav .skip {
+.enhanced .nav h1,
+.enhanced .nav h1 a {
+  display: block;
+  margin: 0;
+}
+.enhanced .nav h1 a::after,
+.enhanced .nav h1 a::before {
   position: absolute;
+  background-position: 50% 50%;
+  content: "";
+  font-weight: 300;
+  height: 2.5em;
+  left: 0;
+  line-height: 1;
+  text-align: center;
+  width: 100%;
+}
+.enhanced .nav h1 a {
   right: 0;
   top: 1.4em;
   background: #363636;
   border-radius: 50%;
   width: 2.5em;
   height: 2.5em;
+  overflow: hidden;
+  text-indent: -1000em;
+  z-index: 1000;
 }
 .enhanced .nav ul {
   max-height: 0;
