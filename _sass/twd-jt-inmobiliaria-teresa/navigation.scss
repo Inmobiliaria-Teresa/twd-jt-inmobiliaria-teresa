@@ -1,6 +1,21 @@
-.logo a{
-	max-width: 200px;
+.head {
+	margin-bottom: 2.2em;
+	border-bottom: 1px solid $gray;
+}
+.logo {
+	margin: 0;
+	max-width: 72.5rem;
+	position: relative;
+	z-index: 1;
+}
+.logo a {
+	max-width: 250px;
 	padding: 1rem 0;
+	text-align: center;
+	width: 80%;
+}
+.logo a, .logo img {
+	display: block;
 }
 
 .nav h1 {
