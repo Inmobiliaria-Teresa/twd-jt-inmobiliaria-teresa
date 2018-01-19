@@ -11,12 +11,10 @@ var nav = document.querySelector( ".nav ul" ),
 if ( navToggle ) {
   navToggle.addEventListener( "click",
     function( e ) {
-      if ( nav.className == "open" ) {
-        nav.className = ""
-        navToggle.innerHTML ="Menú"
+      if ( nav.className == "icon-nav-open" ) {
+        nav.className = "icon-nav-close"
       } else {
-        nav.className = "open"
-        navToggle.innerHTML ="X"
+        nav.className = "icon-nav-open"
       }
       e.preventDefault()
     }, false)
