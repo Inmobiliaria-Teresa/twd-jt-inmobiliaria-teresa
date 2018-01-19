@@ -107,6 +107,10 @@
 	.head header {
 		display: flex;
 		align-content: center;
+		justify-content: space-between;
+	}
+	.head header .nav {
+		height: 100%;
 	}
   .enhanced .nav h1,
   .enhanced .nav h1 a {
@@ -114,9 +118,10 @@
   }
   .enhanced .nav ul {
     overflow: hidden;
-    max-height: inherit;
+    max-height: 100%;
 		display: flex;
 		justify-content: flex-end;
+		align-items: center;
   }
 	.enhanced .nav ul li {
 		margin-left: 1rem;
