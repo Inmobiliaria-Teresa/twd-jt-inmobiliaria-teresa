@@ -6,7 +6,7 @@ if ( !( "querySelector" in document && "addEventListener" in window && "getCompu
 window.document.documentElement.className += " enhanced"
 
 var nav = document.querySelector( ".nav ul" ),
-    navToggle = document.querySelector( ".nav .skip" )
+    navToggle = document.querySelector( ".nav a[href='#menu']" )
 
 if ( navToggle ) {
   navToggle.addEventListener( "click",
