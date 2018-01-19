@@ -1,25 +1,16 @@
+.nav h1 {
+	font-size: 1em;
+	display: none;
+}
+
 .enhanced .nav h1,
 .enhanced .nav h1 a {
-  display: block;
-  margin: 0;
+	display: block;
+	margin: 0;
 }
-.enhanced .nav h1 a {
-	background: #363636;
-	-webkit-border-radius: 50%;
-	border-radius: 50%;
-	width: 2.5em;
-	height: 2.5em;
-	position: absolute;
-	overflow: hidden;
-	right: 0;
-	top: 1.4em;
-	text-indent: -1000em;
-	-moz-transform: translateZ(0);
-	-ms-transform: translateZ(0);
-	-o-transform: translateZ(0);
-	-webkit-transform: rotateZ(360deg);
-	transform: translateZ(0);
-	z-index: 1000;
+
+.nav.is-open h1 a::after {
+	top: 100%;
 }
 .enhanced .nav h1 a::after,
 .enhanced .nav h1 a::before {
@@ -41,6 +32,9 @@
 .nav h1 a::after,
 .nav.is-open h1 a::before {
 	top: 0;
+}
+.nav h1 a::after,
+.nav.is-open h1 a::before {
 	-moz-transform: scale(1);
 	-ms-transform: scale(1);
 	-o-transform: scale(1);
@@ -56,40 +50,30 @@
 	top: -2em;
 }
 .nav h1 a::before,
-.nav.is-open h1 a::after {
-	-moz-transform: scale(.6);
-	-ms-transform: scale(.6);
-	-o-transform: scale(.6);
-	-webkit-transform: scale(.6);
-	transform: scale(.6);
-}
-.nav h1 a::before,
 .icon-nav-close {
 	background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%229.938%22%20height%3D%229.913%22%20viewBox%3D%220%200%209.938%209.913%22%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22M3.89%204.968L0%201.08%201.104%200l3.864%203.888L8.858%200l1.08%201.08-3.89%203.888%203.89%203.865-1.08%201.08-3.89-3.866-3.864%203.866L0%208.833l3.89-3.865z%22%2F%3E%3C%2Fsvg%3E');
 	background-repeat: no-repeat;
 }
-.enhanced .nav.is-open ul {
-	max-height: 20em;
+.nav.is-open h1 a {
+	background-color: #FDC328;
 }
-
-.enhanced .nav ul {
-	max-height: 0;
+.enhanced .nav h1 a {
+	background: #363636;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	width: 2.5em;
+	height: 2.5em;
+	position: absolute;
 	overflow: hidden;
-	-moz-transition: max-height .3s;
-	-ms-transition: max-height .3s;
-	-o-transition: max-height .3s;
-	-webkit-transition: max-height .3s;
-	transition: max-height .3s;
+	right: 0;
+	top: 1.4em;
+	text-indent: -1000em;
 	-moz-transform: translateZ(0);
 	-ms-transform: translateZ(0);
 	-o-transform: translateZ(0);
 	-webkit-transform: rotateZ(360deg);
 	transform: translateZ(0);
-}
-.nav li, .nav ul {
-	list-style: none;
-	padding: 0;
-	margin: 0;
+	z-index: 1000;
 }
 
 @media screen and (min-width: 39em) {

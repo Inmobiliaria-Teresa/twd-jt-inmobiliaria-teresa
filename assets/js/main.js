@@ -11,10 +11,10 @@ var nav = document.querySelector( "#nav" ),
 if ( navToggle ) {
   navToggle.addEventListener( "click",
     function( e ) {
-      if ( nav.className == "nav icon-nav-open" ) {
-        nav.className = "nav icon-nav-close"
+      if ( nav.className == "nav is-open" ) {
+        nav.className = "nav"
       } else {
-        nav.className = "nav icon-nav-open"
+        nav.className = "nav is-open"
       }
       e.preventDefault()
     }, false)
