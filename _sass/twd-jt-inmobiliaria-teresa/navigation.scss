@@ -85,7 +85,7 @@ max-height: 20em;
   	display: none;
   }
   .enhanced .nav ul {
-    overflow: auto;
+    overflow: hidden;
     max-height: inherit;
   }
 }
