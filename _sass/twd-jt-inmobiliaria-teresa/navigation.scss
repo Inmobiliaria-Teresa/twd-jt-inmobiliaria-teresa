@@ -2,16 +2,16 @@
 	font-size: 1em;
 	display: none;
 }
-.nav.is-open h1 a::after {
-	top: 100%;
+.nav h1 a::before {
+	top: -2em;
 }
-
+.nav h1 a::before {
+	background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%229.938%22%20height%3D%229.913%22%20viewBox%3D%220%200%209.938%209.913%22%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22M3.89%204.968L0%201.08%201.104%200l3.864%203.888L8.858%200l1.08%201.08-3.89%203.888%203.89%203.865-1.08%201.08-3.89-3.866-3.864%203.866L0%208.833l3.89-3.865z%22%2F%3E%3C%2Fsvg%3E');
+	background-repeat: no-repeat;
+}
 .nav h1 a::after,
 .nav.is-open h1 a::before {
 	top: 0;
-}
-.nav h1 a::after,
-.nav.is-open h1 a::before {
 	-moz-transform: scale(1);
 	-ms-transform: scale(1);
 	-o-transform: scale(1);
@@ -22,13 +22,10 @@
 	background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2230%22%20height%3D%2214%22%20viewBox%3D%22-6.985%200%2030%2014%22%20enable-background%3D%22new%20-6.985%200%2030%2014%22%3E%3Cpath%20d%3D%22M.218%2010.724H-1.26V5.988L-2.7%208.853h-1.365L-5.51%205.988v4.736h-1.476v-7.71h1.42l2.18%204.406%202.18-4.405H.218v7.71zm1.686-7.71H7.3v1.278H3.447v1.884H6.97v1.288H3.446v1.98h3.866v1.28H1.904v-7.71zm6.8%200h1.464l3.36%205.134V3.015h1.507v7.71h-1.463l-3.36-5.132v5.13H8.705V3.016zM16.67%207.95V3.015h1.53v5c0%201.003.65%201.585%201.643%201.585.99%200%201.63-.582%201.63-1.586v-5h1.542V7.95c0%201.74-1.178%202.93-3.172%202.93S16.67%209.688%2016.67%207.948z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E');
 	background-repeat: no-repeat;
 }
-.nav h1 a::before {
-	top: -2em;
+.nav.is-open h1 a::after {
+	top: 100%;
 }
-.nav h1 a::before {
-	background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%229.938%22%20height%3D%229.913%22%20viewBox%3D%220%200%209.938%209.913%22%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22M3.89%204.968L0%201.08%201.104%200l3.864%203.888L8.858%200l1.08%201.08-3.89%203.888%203.89%203.865-1.08%201.08-3.89-3.866-3.864%203.866L0%208.833l3.89-3.865z%22%2F%3E%3C%2Fsvg%3E');
-	background-repeat: no-repeat;
-}
+
 .enhanced .nav h1,
 .enhanced .nav h1 a {
 	display: block;
