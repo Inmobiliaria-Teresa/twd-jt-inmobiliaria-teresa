@@ -6,12 +6,14 @@
   <body>
 
     {% include navigation.html %}
-    
+
     {{ content }}
 
     {% for inc in page.foot-includes %}
       {% include {{ inc }} %}
     {% endfor %}
+
+    <script type="text/javascript" src="/assets/js/main.js"></script>
 
   </body>
 </html>
