@@ -13,8 +13,10 @@ if ( navToggle ) {
     function( e ) {
       if ( nav.className == "open" ) {
         nav.className = ""
+        navToggle.innerHTML ="Menú"
       } else {
         nav.className = "open"
+        navToggle.innerHTML ="X"
       }
       e.preventDefault()
     }, false)
