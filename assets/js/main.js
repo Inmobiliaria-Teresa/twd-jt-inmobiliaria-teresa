@@ -5,16 +5,16 @@ if ( !( "querySelector" in document && "addEventListener" in window && "getCompu
 
 window.document.documentElement.className += " enhanced"
 
-var nav = document.querySelector( ".nav ul" ),
+var nav = document.querySelector( "#nav" ),
     navToggle = document.querySelector( ".nav a[href='#menu']" )
 
 if ( navToggle ) {
   navToggle.addEventListener( "click",
     function( e ) {
-      if ( nav.className == "icon-nav-open" ) {
-        nav.className = "icon-nav-close"
+      if ( nav.className == "nav icon-nav-open" ) {
+        nav.className = "nav icon-nav-close"
       } else {
-        nav.className = "icon-nav-open"
+        nav.className = "nav icon-nav-open"
       }
       e.preventDefault()
     }, false)
