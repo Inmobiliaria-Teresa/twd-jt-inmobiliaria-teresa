@@ -83,6 +83,10 @@ max-height: 20em;
 }
 
 @media screen and (min-width: 48em) {
+  .enhanced .nav h1,
+  .enhanced .nav h1 a {
+  	display: none;
+  }
   .enhanced .nav ul {
     overflow: auto;
     max-height: inherit;
