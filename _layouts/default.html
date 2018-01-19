@@ -5,9 +5,13 @@
 
   <body>
 
+    <div class="page">
+
     {% include navigation.html %}
 
     {{ content }}
+
+  </div>
 
     {% for inc in page.foot-includes %}
       {% include {{ inc }} %}

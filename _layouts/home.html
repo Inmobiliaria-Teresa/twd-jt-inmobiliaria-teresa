@@ -5,6 +5,8 @@
 
   <body>
 
+    <div class="page">
+
     {% include navigation.html %}
 
     <article>
@@ -15,6 +17,8 @@
       <main>
         {{ content }}
       </main>
+      
+    </div>
 
     {% for inc in page.foot-includes %}
       {% include {{ inc }} %}
