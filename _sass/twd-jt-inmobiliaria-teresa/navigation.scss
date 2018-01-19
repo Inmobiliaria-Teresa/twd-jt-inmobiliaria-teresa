@@ -10,6 +10,7 @@
 .enhanced .nav ul {
   max-height: 0;
   overflow: hidden;
+  transition: max-height 0.25s ease-out;
 }
 .enhanced .nav ul.open {
   max-height: 20em;
