@@ -109,7 +109,7 @@
 		align-content: center;
 		justify-content: space-between;
 	}
-	.head header .nav {
+	.head header nav {
 		height: 100%;
 	}
   .enhanced .nav h1,
@@ -118,7 +118,8 @@
   }
   .enhanced .nav ul {
     overflow: hidden;
-    max-height: 100%;
+    max-height: inherit;
+		height: 100%;
 		display: flex;
 		justify-content: flex-end;
 		align-items: center;
