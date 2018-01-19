@@ -1,0 +1,16 @@
+.enhanced .nav .skip {
+  position: absolute;
+  right: 0;
+  top: 1.4em;
+  background: #363636;
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+}
+.enhanced .nav ul {
+  max-height: 0;
+  overflow: hidden;
+}
+.enhanced .nav ul.open {
+  max-height: 20em;
+}
