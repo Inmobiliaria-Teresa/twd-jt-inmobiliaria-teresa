@@ -103,6 +103,10 @@
 	text-transform: uppercase;
 	text-decoration: none;
 	line-height: 2.5rem;
+	color: $tint;
+}
+.enhanced .nav ul li a:visited {
+	color: $tint;
 }
 .enhanced .nav ul li a:hover {
 	color: $shadow;
