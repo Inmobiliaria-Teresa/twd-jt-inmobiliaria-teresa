@@ -52,7 +52,7 @@
 	margin: 0;
 }
 .enhanced .nav h1 a {
-	background: $shadow;
+	background: $tone;
 	-webkit-border-radius: 50%;
 	border-radius: 50%;
 	width: 2.5em;
@@ -70,7 +70,7 @@
 	z-index: 1000;
 }
 .enhanced .nav h1 a:hover {
-	background: $tone;
+	background: $shadow;
 }
 .enhanced .nav.is-open h1 a,
 .enhanced .nav.is-open h1 a:hover {
