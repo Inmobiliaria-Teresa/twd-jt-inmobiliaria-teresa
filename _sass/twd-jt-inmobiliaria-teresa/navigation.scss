@@ -52,7 +52,7 @@
 	margin: 0;
 }
 .enhanced .nav h1 a {
-	background: #363636;
+	background: $tone;
 	-webkit-border-radius: 50%;
 	border-radius: 50%;
 	width: 2.5em;
@@ -94,6 +94,7 @@
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.25s ease-out;
+	text-align: right;
 }
 .enhanced .nav.is-open ul {
 	max-height: 20em;
@@ -101,6 +102,10 @@
 .enhanced .nav ul li a {
 	text-transform: uppercase;
 	text-decoration: none;
+	line-height: 2.5rem;
+}
+.enhanced .nav ul li a:hover {
+	color: $shadow;
 }
 
 @media screen and (min-width: 50em) {
