@@ -52,7 +52,7 @@
 	margin: 0;
 }
 .enhanced .nav h1 a {
-	background: $tone;
+	background: $shadow;
 	-webkit-border-radius: 50%;
 	border-radius: 50%;
 	width: 2.5em;
@@ -69,7 +69,11 @@
 	transform: translateZ(0);
 	z-index: 1000;
 }
-.enhanced .nav.is-open h1 a {
+.enhanced .nav h1 a:hover {
+	color: $tone;
+}
+.enhanced .nav.is-open h1 a,
+.enhanced .nav.is-open h1 a:hover {
 	background-color: $red;
 }
 .enhanced .nav h1 a::after,
