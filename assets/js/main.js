@@ -21,7 +21,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
       }, false)
   }
 
-  load()
+  if (!sessionStorage.hasOwnProperty("pisos")) {
+    loadApi("/api/inmuebles.json")
+  }
 
 });
 
@@ -38,9 +40,8 @@ function loadJSON(file, callback) {
   xobj.send(null);
  }
 
-function load() {
-  loadJSON("/api/inmuebles.json", function(response) {
-
-  sessionStorage.setItem("pisos", JSON.stringify(JSON.parse(response)))
+function loadApi(file) {
+  loadJSON(file, function(response) {
+    sessionStorage.setItem("pisos", JSON.stringify(JSON.parse(response)))
   });
 }
