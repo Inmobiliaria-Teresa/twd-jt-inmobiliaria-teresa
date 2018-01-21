@@ -29,7 +29,7 @@
       var pisos = [
       {% for piso in pisos %}
         {
-          'title': {{ piso.title }},
+          'title': '{{ piso.title }}',
           'precio': {{ piso.price }}
         }{% if forloop.last != true %}{{","}}{% endif %}
       {% endfor %}
