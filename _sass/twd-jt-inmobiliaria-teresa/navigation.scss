@@ -123,6 +123,9 @@
 		align-content: center;
 		//justify-content: space-between;
 	}
+	.head .nav {
+		flex: 1;
+	}
 	.head header nav {
 		height: 100%;
 	}
