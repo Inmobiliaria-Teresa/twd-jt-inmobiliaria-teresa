@@ -17,12 +17,27 @@
       <main>
         {{ content }}
       </main>
-      
+
     </div>
 
     {% for inc in page.foot-includes %}
       {% include {{ inc }} %}
     {% endfor %}
+
+    {% assig pisos = site.inmuebles %}
+    <script type="text/javascript">
+      var pisos = [
+      {% for piso in pisos %}
+        {
+          'title': {{ piso.title }},
+          'precio': {{ piso.price }}
+        }{% if forloop.last != true %}{{","}}{% endif %}
+      {% endfor %}
+      ]
+      document.addEventListener("DOMContentLoaded", function(event) {
+        localStorage.setItems("pisos", JSON.stringify(pisos))
+      }
+    </script>
 
   </body>
 </html>
