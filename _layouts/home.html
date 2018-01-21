@@ -24,7 +24,7 @@
       {% include {{ inc }} %}
     {% endfor %}
 
-    {% assig pisos = site.inmuebles %}
+    {% assign pisos = site.inmuebles %}
     <script type="text/javascript">
       var pisos = [
       {% for piso in pisos %}
