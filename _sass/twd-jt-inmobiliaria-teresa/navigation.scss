@@ -107,6 +107,7 @@
 	text-transform: uppercase;
 	text-decoration: none;
 	line-height: 2.5rem;
+	padding: 2.5rem 0;
 	color: $shadow;
 }
 .enhanced .nav ul li a:visited {
@@ -120,7 +121,7 @@
 	.head header {
 		display: flex;
 		align-content: center;
-		justify-content: space-between;
+		//justify-content: space-between;
 	}
 	.head header nav {
 		height: 100%;
@@ -134,10 +135,12 @@
     max-height: inherit;
 		height: 100%;
 		display: flex;
-		justify-content: flex-end;
+		justify-content: space-around;
 		align-items: center;
+		text-align: center;
   }
 	.enhanced .nav ul li {
 		margin-left: 1rem;
+		flex: 1;
 	}
 }
