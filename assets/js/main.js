@@ -40,6 +40,6 @@ function loadJSON(file, callback) {
 
 function load() {
   loadJSON("/api/inmuebles.json", function(response) {
-    localSession.setItem("pisos", JSON.stringify(response))
+  sessionStorage.setItem("pisos", JSON.stringify(response))
   });
 }
