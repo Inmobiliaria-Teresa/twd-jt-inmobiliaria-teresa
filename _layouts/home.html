@@ -24,20 +24,5 @@
       {% include {{ inc }} %}
     {% endfor %}
 
-    {% assign pisos = site.inmuebles %}
-    <script type="text/javascript">
-      var pisos = [
-      {% for piso in pisos %}
-        {
-          'title': '{{ piso.title }}',
-          'precio': {{ piso.price }}
-        }{% if forloop.last != true %}{{","}}{% endif %}
-      {% endfor %}
-      ]
-      document.addEventListener("DOMContentLoaded", function(event) {
-        localStorage.setItem("pisos", JSON.stringify(pisos))
-      })
-    </script>
-
   </body>
 </html>
