@@ -107,7 +107,6 @@
 	text-transform: uppercase;
 	text-decoration: none;
 	line-height: 2.5rem;
-	padding: 2.5rem 0;
 	color: $shadow;
 }
 .enhanced .nav ul li a:visited {
@@ -145,5 +144,8 @@
 	.enhanced .nav ul li {
 		//margin-left: 1rem;
 		flex: 1;
+	}
+	.enhanced .nav ul li a {
+		padding: 2.5rem 0;
 	}
 }
