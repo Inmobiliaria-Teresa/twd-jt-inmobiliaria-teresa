@@ -1,4 +1,13 @@
 <form class="" action="index.html" method="post">
-  <label for="price"></label>
+  <label for="price">Precio máximo</label>
   <input type="range" name="price" min="100" max="500" value="250">
+  
+  <input type="text" name="browser" list="browsers" />
+  <datalist id="browsers">
+    <option value="Chrome" />
+    <option value="Firefox" />
+    <option value="Internet Explorer" />
+    <option value="Safari" />
+    <option value="Opera" />
+  </datalist>
 </form>
