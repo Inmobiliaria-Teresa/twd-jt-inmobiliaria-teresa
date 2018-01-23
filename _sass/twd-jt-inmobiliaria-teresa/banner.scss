@@ -1,11 +1,13 @@
 .page.frontpage article header h1 {
-  height: 0;
+  /*height: 0;
   overflow: hidden;
   padding-top: 1080px / 1920px * 100%;
-  background: white;
+  background: white;*/
+  height: calc(100vh - 100px);
   position: relative;
   background-image: url('/assets/images/front-background.jpg');
   background-size: contain;
+  background-position: center;
 
   .background-image {
     position: absolute;
