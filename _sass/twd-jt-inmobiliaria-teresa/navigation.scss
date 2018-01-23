@@ -1,11 +1,11 @@
 .head {
 	/*margin-bottom: 2.2em;
-	border-bottom: 1px solid $tint;*/
+	border-bottom: 1px solid $tint;
 	height: 100px;
 	max-width: 72.5rem;
 	position: relative;
 	width: 87.818181818181818181%;
-	margin: 0 auto;
+	margin: 0 auto;*/
 }
 .logo {
 	margin: 0;
@@ -19,6 +19,9 @@
 }
 .logo a, .logo img {
 	display: block;
+}
+nav {
+	background-color: $white;
 }
 
 .nav h1 {
