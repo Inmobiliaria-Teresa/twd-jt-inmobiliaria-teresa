@@ -5,21 +5,20 @@
 
   <body>
 
-    <div class="page">
+    <div class="page frontpage">
 
     {% include navigation.html %}
 
-    {% include formulario-busqueda-inmueble.html %}
-
     <article>
       <header>
-       <h1>This is the Home Page</h1>
+       <h1>
+         <div class="background-image">
+           This is the Home Page
+         </div>
+       </h1>
       </header>
 
-      <section id="banner">
-        <div class="background-image">
-        </div>
-      </section>
+      {% include formulario-busqueda-inmueble.html %}
 
       <main>
         {{ content }}
