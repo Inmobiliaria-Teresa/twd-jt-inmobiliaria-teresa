@@ -2,15 +2,16 @@
 	/*margin-bottom: 2.2em;
 	border-bottom: 1px solid $tint;*/
 	height: 100px;
+	max-width: 72.5rem;
+	position: relative;
+	width: 87.818181818181818181%;
 }
 .logo {
 	margin: 0;
-	max-width: 72.5rem;
-	position: relative;
 	z-index: 1;
 }
 .logo a {
-	max-width: 250px;
+	max-width: 200px;
 	padding: 1rem 0;
 	text-align: center;
 	width: 60%;
