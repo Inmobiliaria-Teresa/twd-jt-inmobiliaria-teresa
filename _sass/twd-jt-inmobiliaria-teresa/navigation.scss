@@ -129,11 +129,11 @@ nav {
 @media screen and (min-width: 50em) {
 	.head header {
 		display: flex;
-		align-content: center;
-		//justify-content: space-between;
+		//align-content: center;
+		justify-content: space-between;
 	}
 	.head .nav {
-		flex: 1;
+		//flex: 1;
 	}
 	.head header nav {
 		height: 100%;
@@ -147,12 +147,12 @@ nav {
     max-height: inherit;
 		height: 100%;
 		display: flex;
-		justify-content: space-around;
+		//justify-content: space-around;
 		align-items: center;
-		text-align: center;
+		//text-align: center;
   }
 	.enhanced .nav ul li {
-		//margin-left: 1rem;
+		margin-left: 1rem;
 		flex: 1;
 	}
 	.enhanced .nav ul li a {
