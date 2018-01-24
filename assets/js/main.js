@@ -21,8 +21,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
       }, false)
   }
 
-  if (!sessionStorage.hasOwnProperty("pisos")) {
-    loadApi("/api/inmuebles.json")
+  let sitetime = document.querySelector('body').getAttribute("data-sitetime")
+
+  if (!sessionStorage.getItem("sitetime")) {
+    sessionStorage.setItem("sitetime", sitetime)
+  }
+
+  if ((sessionStorage.getItem("sitetime") !== sitetime) || !sessionStorage.hasOwnProperty("pisos")) {
+    loadApi("/api/inmuebles.json", sitetime)
   } else {
     let vtas = document.querySelector("label[for='tipo1'] span")
     vtas.innerHTML = JSON.parse(sessionStorage.getItem("pisos")).length
@@ -43,9 +49,10 @@ function loadJSON(file, callback) {
   xobj.send(null);
  }
 
-function loadApi(file) {
+function loadApi(file, timestamp) {
   loadJSON(file, function(response) {
     sessionStorage.setItem("pisos", JSON.stringify(JSON.parse(response)))
+    sessionStorage.setItem("sitetime", timestamp)
     let vtas = document.querySelector("label[for='tipo1'] span")
     vtas.innerHTML = JSON.parse(sessionStorage.getItem("pisos")).length
   });
