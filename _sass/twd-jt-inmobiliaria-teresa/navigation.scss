@@ -34,7 +34,8 @@ nav {
 	top: -2em;
 }
 .nav h1 a::before {
-	background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%229.938%22%20height%3D%229.913%22%20viewBox%3D%220%200%209.938%209.913%22%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22M3.89%204.968L0%201.08%201.104%200l3.864%203.888L8.858%200l1.08%201.08-3.89%203.888%203.89%203.865-1.08%201.08-3.89-3.866-3.864%203.866L0%208.833l3.89-3.865z%22%2F%3E%3C%2Fsvg%3E');
+	background-image: //url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%229.938%22%20height%3D%229.913%22%20viewBox%3D%220%200%209.938%209.913%22%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22M3.89%204.968L0%201.08%201.104%200l3.864%203.888L8.858%200l1.08%201.08-3.89%203.888%203.89%203.865-1.08%201.08-3.89-3.866-3.864%203.866L0%208.833l3.89-3.865z%22%2F%3E%3C%2Fsvg%3E');
+	url('/assets/images/x.svg');
 	background-repeat: no-repeat;
 }
 .nav h1 a::after,
