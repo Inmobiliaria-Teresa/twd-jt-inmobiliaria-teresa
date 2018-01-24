@@ -11,7 +11,7 @@
   background-repeat: no-repeat;
   position: relative;
 
-  @supports (top: calc()) {
+  @supports (top: calc(1px)) {
     height: calc(100vh - 100px);
   }
 
