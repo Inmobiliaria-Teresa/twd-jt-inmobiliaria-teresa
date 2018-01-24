@@ -1,11 +1,10 @@
 .frontpage #form-busqueda {
   position: realtive;
-  margin: 0 auto;
-  border: solid 1px $tone;
-  padding: 1rem;
-
   .search {
     position: absolute;
-    top: -1rem;
+    top: -5rem;
+    display: grid;
+    background-color: $gray;
   }
+
 }
