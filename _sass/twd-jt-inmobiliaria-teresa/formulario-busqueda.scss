@@ -5,7 +5,8 @@
   .search {
     position: absolute;
     //top: -15rem;
-    top: calc(-100vh + 10rem);
+    //top: calc(-100vh + 10rem);
+    top: calc(-100vh + 30rem);
     display: grid;
     background-color: rgba($gray, 0.8);
     width: 100%;
@@ -14,10 +15,11 @@
   }
 }
 
-@media screen and (min-width: 40em) {
+@media screen and (min-width: 50em) {
   .frontpage #form-busqueda {
     width: 100%;
     .search {
+      top: calc(-100vh + 10rem);
       width: 17rem;
       right: 1rem;
     }
