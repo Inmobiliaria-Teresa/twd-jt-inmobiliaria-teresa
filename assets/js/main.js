@@ -50,10 +50,10 @@ function loadJSON(file, callback) {
   xobj.send(null);
  }
 
-function loadApi(file, timestamp) {
+function loadApi(file, st) {
   loadJSON(file, function(response) {
     sessionStorage.setItem("pisos", JSON.stringify(JSON.parse(response)))
-    sessionStorage.setItem("sitetime", timestamp)
+    sessionStorage.setItem("sitetime", st)
     let vtas = document.querySelector("label[for='tipo1'] span")
     vtas.innerHTML = JSON.parse(sessionStorage.getItem("pisos")).length
   });
