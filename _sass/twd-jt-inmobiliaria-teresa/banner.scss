@@ -15,6 +15,7 @@
     position: absolute;
   	top: calc(-100px + 10rem);
   	left: 2rem;
+    right: 2rem;
   	/* width: 50%; */
   	/* height: 100%; */
   	font-size: 5rem;
@@ -22,6 +23,14 @@
   	color: white;
   	font-weight: 100;
   	text-shadow: 3px 3px 5px rgba(0,0,0,0.8);
-  	max-width: 10ch;
+  	max-width: 8ch;
+  }
+}
+
+@media screen and (min-width: 40em) {
+  .page.frontpage article header h1 {
+    .header-text {
+      max-width: 10ch;
+    }
   }
 }
