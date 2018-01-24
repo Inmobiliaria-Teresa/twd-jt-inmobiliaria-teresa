@@ -4,11 +4,12 @@
   margin: 0 auto;
   .search {
     position: absolute;
-    top: -5rem;
+    top: -15rem;
     display: grid;
     background-color: rgba($gray, 0.6);
     width: 100%;
     padding: 1rem;
+    box-shadow: 3px 2px 5px #000000b3, -3px 2px 5px #000000b3;
   }
 
 }
