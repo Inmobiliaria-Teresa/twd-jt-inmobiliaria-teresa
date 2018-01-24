@@ -11,6 +11,7 @@
 .logo {
 	margin: 0;
 	z-index: 1;
+	height: 100px;
 }
 .logo a {
 	max-width: 200px;
@@ -67,7 +68,7 @@ nav {
 	position: absolute;
 	overflow: hidden;
 	right: 0;
-	top: 1.4em;
+	top: 30px;
 	text-indent: -1000em;
 	-moz-transform: translateZ(0);
 	-ms-transform: translateZ(0);
