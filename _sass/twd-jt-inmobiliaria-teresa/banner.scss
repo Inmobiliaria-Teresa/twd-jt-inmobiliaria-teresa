@@ -3,7 +3,7 @@
   overflow: hidden;
   padding-top: 1080px / 1920px * 100%;
   background: white;*/
-  height: calc(100vh - 100px);
+  height: 500px;
   //position: relative;
   background-image: url('/assets/images/front-background.jpg');
   background-size: cover;
@@ -24,6 +24,10 @@
   	text-shadow: 3px 3px 5px rgba(0,0,0,0.8);
   	max-width: 5ch;
   }
+}
+
+@supports(height: 1vh) {
+  height: calc(100vh - 100px);
 }
 
 @media screen and (min-width: 30em) {
