@@ -14,10 +14,9 @@
   .header-text {
     position: absolute;
   	top: calc(-100px + 10rem);
-  	left: 2rem;
-    right: 2rem;
-  	/* width: 50%; */
-  	/* height: 100%; */
+  	//left: 2rem;
+    left: calc(50% - 4ch);
+    //right: 2rem;
   	font-size: 5rem;
   	text-align: center;
   	color: white;
@@ -30,7 +29,8 @@
 @media screen and (min-width: 50em) {
   .page.frontpage article header h1 {
     .header-text {
-      max-width: 10ch;
+      left: 2rem;
+      max-width: 9ch;
     }
   }
 }
