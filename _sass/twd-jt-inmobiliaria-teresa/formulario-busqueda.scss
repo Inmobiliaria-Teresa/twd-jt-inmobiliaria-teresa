@@ -1,7 +1,7 @@
 .frontpage #form-busqueda {
   position: relative;
-  //width: 300px;
-  //margin: 0 auto;
+  width: 17rem;
+  margin: 0 auto;
   .search {
     position: absolute;
     //top: -15rem;
@@ -9,10 +9,16 @@
     right: 1rem;
     display: grid;
     background-color: rgba($gray, 0.8);
-    //width: 100%;
-    width: 17rem;
+    width: 100%;
     padding: 1rem;
     box-shadow: 3px 2px 5px rgba(0,0,0,0.6), -3px 2px 5px rgba(0,0,0,0.6);
   }
+}
 
+@media screen and (min-width: 50em){
+  .frontpage #form-busqueda {
+    width: 100%;
+    .search {
+      width: 17rem;
+    }
 }
