@@ -11,7 +11,7 @@
   background-repeat: no-repeat;
   position: relative;
 
-  @supports (calc()) {
+  @supports (top: calc()) {
     height: calc(100vh - 100px);
   }
 
@@ -28,7 +28,7 @@
   	text-shadow: 3px 3px 5px rgba(0,0,0,0.8);
   	max-width: 5ch;
 
-    @supports (calc()) {
+    @supports (top: calc()) {
       top: calc(-100px + 8rem);
       left: calc(50% - 2.5ch);
     }
@@ -42,7 +42,7 @@
       left: 140px;
       max-width: 8ch;
 
-      @supports (calc()) {
+      @supports (top: calc()) {
         top: calc(-100px + 8rem);
         left: calc(50% - 2.5ch);
       }
