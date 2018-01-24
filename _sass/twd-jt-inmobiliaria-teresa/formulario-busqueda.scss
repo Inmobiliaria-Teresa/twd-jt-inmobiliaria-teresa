@@ -3,15 +3,9 @@
   width: 17rem;
   margin: 0 auto;
   .search {
-    position: absolute;
-    //top: -15rem;
-    //top: calc(-100vh + 10rem);
-    top: calc(-100vh + 30rem);
     display: grid;
-    background-color: rgba($gray, 0.8);
     width: 100%;
     padding: 1rem;
-    box-shadow: 3px 2px 5px rgba(0,0,0,0.6), -3px 2px 5px rgba(0,0,0,0.6);
   }
 }
 
@@ -19,9 +13,12 @@
   .frontpage #form-busqueda {
     width: 100%;
     .search {
+      position: absolute;
       top: calc(-100vh + 10rem);
       width: 17rem;
       right: 1rem;
+      background-color: rgba($gray, 0.8);
+      box-shadow: 3px 2px 5px rgba(0,0,0,0.6), -3px 2px 5px rgba(0,0,0,0.6);
     }
   }
 }
