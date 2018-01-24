@@ -43,5 +43,7 @@ function loadJSON(file, callback) {
 function loadApi(file) {
   loadJSON(file, function(response) {
     sessionStorage.setItem("pisos", JSON.stringify(JSON.parse(response)))
+    let vtas = document.querySelector( "#tipo1 span" )
+    vtas.innerHTML = JSON.parse(sessionStorage.getItem("pisos")).lenght
   });
 }
