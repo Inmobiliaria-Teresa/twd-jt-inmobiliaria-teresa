@@ -24,8 +24,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
   if (!sessionStorage.hasOwnProperty("pisos")) {
     loadApi("/api/inmuebles.json")
   } else {
-    var vtas = document.querySelector("label[for='tipo1'] span")
-    vtas.innerHTML = JSON.parse(sessionStorage.getItem("pisos")).lenght
+    let vtas = document.querySelector("label[for='tipo1'] span")
+    vtas.innerHTML = JSON.parse(sessionStorage.getItem("pisos")).length
   }
 
 });
@@ -46,7 +46,7 @@ function loadJSON(file, callback) {
 function loadApi(file) {
   loadJSON(file, function(response) {
     sessionStorage.setItem("pisos", JSON.stringify(JSON.parse(response)))
-    var vtas = document.querySelector("label[for='tipo1'] span")
-    vtas.innerHTML = JSON.parse(sessionStorage.getItem("pisos")).lenght
+    let vtas = document.querySelector("label[for='tipo1'] span")
+    vtas.innerHTML = JSON.parse(sessionStorage.getItem("pisos")).length
   });
 }
