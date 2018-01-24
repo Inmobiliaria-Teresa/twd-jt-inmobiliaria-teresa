@@ -14,11 +14,15 @@
     width: 100%;
     .search {
       position: absolute;
-      top: calc(-100vh + 10rem);
+      top: -340px;
       width: 17rem;
       right: 1rem;
       background-color: rgba($gray, 0.8);
       box-shadow: 3px 2px 5px rgba(0,0,0,0.6), -3px 2px 5px rgba(0,0,0,0.6);
+
+      @supports (height: 1vh) {
+        top: calc(-100vh + 10rem);
+      }
     }
   }
 }
