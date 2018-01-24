@@ -11,6 +11,10 @@
   background-repeat: no-repeat;
   position: relative;
 
+  @supports (height: 1vh) {
+    height: calc(100vh - 100px);
+  }
+
   .header-text {
     position: absolute;
   	top: calc(-100px + 8rem);
@@ -24,10 +28,6 @@
   	text-shadow: 3px 3px 5px rgba(0,0,0,0.8);
   	max-width: 5ch;
   }
-}
-
-@supports (height: 1vh) {
-  height: calc(100vh - 100px);
 }
 
 @media screen and (min-width: 30em) {
