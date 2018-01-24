@@ -13,22 +13,32 @@
 
   .header-text {
     position: absolute;
-  	top: calc(-100px + 10rem);
+  	top: calc(-100px + 8rem);
   	//left: 2rem;
-    left: calc(50% - 4ch);
+    left: calc(50% - 2.5ch);
     //right: 2rem;
   	font-size: 5rem;
   	text-align: center;
   	color: white;
   	font-weight: 100;
   	text-shadow: 3px 3px 5px rgba(0,0,0,0.8);
-  	max-width: 8ch;
+  	max-width: 5ch;
+  }
+}
+
+@media screen and (min-width: 30em) {
+  .page.frontpage article header h1 {
+    .header-text {
+      left: calc(50% - 4ch);
+      max-width: 8ch;
+    }
   }
 }
 
 @media screen and (min-width: 50em) {
   .page.frontpage article header h1 {
     .header-text {
+      top: calc(-100px + 10rem);
       left: 2rem;
       max-width: 9ch;
     }
