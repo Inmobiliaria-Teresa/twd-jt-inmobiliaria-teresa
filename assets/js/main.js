@@ -23,11 +23,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   let sitetime = document.querySelector('body').getAttribute("data-sitetime")
 
-  if (!sessionStorage.getItem("sitetime")) {
+  if (!sessionStorage.getItem("sitetime") || (sessionStorage.getItem("sitetime") != sitetime)) {
     sessionStorage.setItem("sitetime", sitetime)
+    loadApi("/api/inmuebles.json", sitetime)
   }
 
-  if ((sessionStorage.getItem("sitetime") !== sitetime) || !sessionStorage.hasOwnProperty("pisos")) {
+  if (!sessionStorage.hasOwnProperty("pisos")) {
     loadApi("/api/inmuebles.json", sitetime)
   } else {
     let vtas = document.querySelector("label[for='tipo1'] span")
