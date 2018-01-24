@@ -1,13 +1,16 @@
 .frontpage #form-busqueda {
   position: relative;
   width: 300px;
-  margin: 0 auto;
+  //margin: 0 auto;
   .search {
     position: absolute;
-    top: -15rem;
+    //top: -15rem;
+    top: calc(-100vh + 10rem);
+    right: 1.5rem;
     display: grid;
-    background-color: rgba($gray, 0.6);
-    width: 100%;
+    background-color: rgba($gray, 0.8);
+    //width: 100%;
+    width: 300px
     padding: 1rem;
     box-shadow: 3px 2px 5px rgba(0,0,0,0.6), -3px 2px 5px rgba(0,0,0,0.6);
   }
