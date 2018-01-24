@@ -44,8 +44,8 @@
       max-width: 30em;
 
       @supports (height: 1vh) {
-        top: calc(-100px + 8rem);
-        left: calc(50% - 2.5ch);
+        top: calc(-100px + 10rem);
+        left: calc(50% - 4ch);
         max-width: 8ch;
       }
     }
@@ -56,7 +56,11 @@
   .page.frontpage article header h1 {
     .header-text {
       left: 2rem;
-      max-width: 9ch;
+      max-width: 35em;
+
+      @supports (height: 1vh) {
+        max-width: 9ch;
+      }
     }
   }
 }
