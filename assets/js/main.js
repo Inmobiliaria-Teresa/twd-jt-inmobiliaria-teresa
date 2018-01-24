@@ -56,4 +56,5 @@ function loadApi(file, st) {
     let vtas = document.querySelector("label[for='tipo1'] span")
     vtas.innerHTML = JSON.parse(sessionStorage.getItem("pisos")).length
   });
+  sessionStorage.setItem("sitetime", st)
 }
