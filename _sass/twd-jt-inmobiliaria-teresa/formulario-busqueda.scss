@@ -6,7 +6,6 @@
     position: absolute;
     //top: -15rem;
     top: calc(-100vh + 10rem);
-    right: 1rem;
     display: grid;
     background-color: rgba($gray, 0.8);
     width: 100%;
@@ -20,6 +19,7 @@
     width: 100%;
     .search {
       width: 17rem;
+      right: 1rem;
     }
   }
 }
