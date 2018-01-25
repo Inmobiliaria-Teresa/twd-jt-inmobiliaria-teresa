@@ -106,5 +106,5 @@ function updateFormPrice() {
   let price = document.querySelector('#form-price')
   price.setAttribute("min", minPrice)
   price.setAttribute("max", maxPrice)
-  price.value = maxPrice
+  price.setAttribute("value", maxPrice)
 }
