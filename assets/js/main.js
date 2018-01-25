@@ -103,7 +103,7 @@ function updateFormPrice() {
     divPrecio.removeChild(divPrecio.firstChild);
   }
 
-  let label = createElement("label")
+  let label = document.createElement("label")
   label.setAttribute("for","#for-price-slider")
   divPrecio.appendChild(label)
 
