@@ -87,6 +87,7 @@ function updateSerachForm() {
     citiesList.appendChild(op)
   }
 
+  updateFormPrice()
 
 }
 
@@ -95,6 +96,7 @@ function onlyUnique(value, index, self) {
 }
 
 function updateFormPrice() {
+  var pisos = JSON.parse(sessionStorage.getItem("pisos"))
   let tipo = document.querySelector('#form-tipo input:checked').value
   let prices = [];
   for (p in pisos.filter((item) => item.status.toLowerCase() == tipo )) { prices.push(pisos[p].precio) }
