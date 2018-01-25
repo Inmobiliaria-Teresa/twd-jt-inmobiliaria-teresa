@@ -104,7 +104,7 @@ function updateFormPrice() {
   }
 
   let label = document.createElement("label")
-  label.setAttribute("for","#for-price-slider")
+  label.setAttribute("for","#form-price-slider")
   divPrecio.appendChild(label)
 
   let pisos = JSON.parse(sessionStorage.getItem("pisos"))
@@ -125,13 +125,14 @@ function updateFormPrice() {
   input.setAttribute("max", maxPrice)
   input.setAttribute("value", minPrice)
   input.setAttribute("oninput","updateFormPriceValue(value)")
-  updateFormPriceValue(minPrice)
   divPrecio.appendChild(input)
 
   let output = document.createElement("output")
   output.setAttribute("for", "#form-price-slider")
   output.setAttribute("id", "form-price-output")
   divPrecio.appendChild(output)
+
+  updateFormPriceValue(minPrice)
 }
 
 function updateFormPriceValue(vol) {
