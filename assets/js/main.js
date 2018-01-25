@@ -72,6 +72,9 @@ function updateSerachForm() {
   alquilerSpan.innerHTML = "(" + pisos.filter((piso) => piso.status === 'Alquiler').length +")"
 
   let citiesList = document.querySelector("#form-cities")
+  while (citiesList.firstChild) {
+    citiesList.removeChild(citiesList.firstChild);
+}
   let cities = []
   for (p in pisos) { cities.push(pisos[p].city) }
   let citiesUniq = cities.filter( onlyUnique )
