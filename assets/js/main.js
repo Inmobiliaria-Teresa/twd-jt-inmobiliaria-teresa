@@ -98,6 +98,15 @@ function onlyUnique(value, index, self) {
 
 function updateFormPrice() {
 
+  let divPrecio = document.querySelector("#form-precio")
+  while (divPrecio.firstChild) {
+    divPrecio.removeChild(divPrecio.firstChild);
+  }
+
+  let label = createElement("label")
+  label.setAttribute("for","#for-price-slider")
+  divPrecio.appendChild(label)
+
   let pisos = JSON.parse(sessionStorage.getItem("pisos"))
   let tipo = document.querySelector('#form-tipo input:checked').value
   let prices = [];
@@ -107,11 +116,22 @@ function updateFormPrice() {
   prices.sort((a,b) => a - b)
   let minPrice = prices[0]
   let maxPrice = prices[prices.length - 1]
-  let price = document.querySelector('#form-price')
-  price.setAttribute("min", minPrice)
-  price.setAttribute("max", maxPrice)
-  price.setAttribute("value", minPrice)
+
+  let input = document.createElement("input")
+  input.setAttribute("id","form-price-slider")
+  input.setAttribute("type","range")
+  input.setAttribute("min",0)
+  input.setAttribute("min", minPrice)
+  input.setAttribute("max", maxPrice)
+  input.setAttribute("value", minPrice)
+  input.setAttribute("oninput","updateFormPriceValue(value)")
   updateFormPriceValue(minPrice)
+  divPrecio.appendChild(input)
+
+  let output = document.createElement("output")
+  output.setAttribute("for", "#form-price-slider")
+  output.setAttribute("id", "form-price-output")
+  divPrecio.appendChild(output)
 }
 
 function updateFormPriceValue(vol) {

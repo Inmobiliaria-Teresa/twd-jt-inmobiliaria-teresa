@@ -10,9 +10,15 @@
     <label for="form-alquiler">Alquiler <span></span></label>
   </div>
 
-  <label for="form-price">Precio máximo</label>
-  <input type="range" id="form-price" name="price" min="100" max="500" oninput="updateFormPriceValue(value)">
-  <output for="form-price" id="form-price-output">250</output>
+  <div id="form-precio">
+    <label for="form-price-slider">Precio máximo</label>
+    <input type="range" id="form-price-slider"
+           name="price"
+           min="100"
+           max="500"
+           oninput="updateFormPriceValue(value)">
+    <output for="form-price-slider" id="form-price-output">250</output>
+  </div>
 
   <input type="text" name="cities" list="form-cities" placeholder="Ciudad">
   <datalist id="form-cities">
