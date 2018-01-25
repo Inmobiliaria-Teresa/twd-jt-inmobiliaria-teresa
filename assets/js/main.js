@@ -88,7 +88,7 @@ function updateSerachForm() {
   }
 
   let prices = [];
-  for (p in pisos) { prices.push(pisos[p].price) }
+  for (p in pisos) { prices.push(pisos[p].precio) }
   prices.sort()
   let minPrice = prices[0]
   let maxPrice = prices[prices.length - 1]
