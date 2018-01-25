@@ -38,7 +38,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
     loadApi("/api/inmuebles.json")
   }
 
-  updateSerachForm()
+  if (document.querySelector('#form-busqueda')) {
+    updateSerachForm()
+  }
 
 });
 
@@ -66,31 +68,34 @@ function updateSerachForm() {
   var pisos = JSON.parse(sessionStorage.getItem("pisos"))
 
   let ventasSpan = document.querySelector("label[for='form-venta'] span")
-  if (ventasSpan) {
-    ventasSpan.innerHTML = "(" + pisos.filter((piso) => piso.status === 'Venta').length +")"
-  }
+  ventasSpan.innerHTML = "(" + pisos.filter((piso) => piso.status === 'Venta').length +")"
 
   let alquilerSpan = document.querySelector("label[for='form-alquiler'] span")
-  if (alquilerSpan) {
-    alquilerSpan.innerHTML = "(" + pisos.filter((piso) => piso.status === 'Alquiler').length +")"
-  }
+  alquilerSpan.innerHTML = "(" + pisos.filter((piso) => piso.status === 'Alquiler').length +")"
 
   let citiesList = document.querySelector("#form-cities")
-  if (citiesList) {
-    while (citiesList.firstChild) {
-      citiesList.removeChild(citiesList.firstChild);
-    }
-
-    let cities = []
-    for (p in pisos) { cities.push(pisos[p].city) }
-    let citiesUniq = cities.filter( onlyUnique )
-    citiesUniq.sort()
-    for (c in citiesUniq) {
-      let op = document.createElement("option")
-      op.value = citiesUniq[c]
-      citiesList.appendChild(op)
-    }
+  while (citiesList.firstChild) {
+    citiesList.removeChild(citiesList.firstChild);
   }
+  let cities = []
+  for (p in pisos) { cities.push(pisos[p].city) }
+  let citiesUniq = cities.filter( onlyUnique )
+  citiesUniq.sort()
+  for (c in citiesUniq) {
+    let op = document.createElement("option")
+    op.value = citiesUniq[c]
+    citiesList.appendChild(op)
+  }
+
+  let prices = [];
+  for (p in pisos) { prices.push(pisos[p].price) }
+  prices.sort()
+  let minPrice = prices[0]
+  let maxPrice = prices[prices.length - 1]
+  let price = document.querySelector('#form-price')
+  price.setAttribute("min", minPrice)
+  price.setAttribute("max", maxPrice)
+  price.value = maxPrice
 }
 
 function onlyUnique(value, index, self) {
