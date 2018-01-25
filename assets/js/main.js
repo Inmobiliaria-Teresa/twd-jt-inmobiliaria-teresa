@@ -79,7 +79,7 @@ function updateSerachForm() {
   for (c in citiesUniq) {
     let op = document.createElement("option")
     op.value = citiesUniq[c]
-    citiesList.addChild(op)
+    citiesList.appendChild(op)
   }
 }
 
