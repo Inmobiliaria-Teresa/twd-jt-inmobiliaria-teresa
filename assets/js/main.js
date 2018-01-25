@@ -97,7 +97,7 @@ function onlyUnique(value, index, self) {
 function updateFormPrice() {
   let tipo = document.querySelector('#form-tipo input:checked').value
   let prices = [];
-  for (p in pisos.filter((item) => item.status.toLowerCase() === tipo )) { prices.push(pisos[p].precio) }
+  for (p in pisos.filter((item) => item.status.toLowerCase() == tipo )) { prices.push(pisos[p].precio) }
   prices.sort((a,b) => a - b)
   let minPrice = prices[0]
   let maxPrice = prices[prices.length - 1]
