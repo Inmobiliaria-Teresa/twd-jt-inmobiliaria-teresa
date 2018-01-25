@@ -23,7 +23,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   let sitetime = document.querySelector('body').getAttribute("data-sitetime")
 
-  if (!sessionStorage.getItem("sitetime") || (sessionStorage.getItem("sitetime") != sitetime)) {
+  if (!sessionStorage.getItem("sitetime")) {
+    sessionStorage.setItem("sitetime", sitetime)
+    loadApi("/api/inmuebles.json")
+
+  if (sessionStorage.getItem("sitetime") != sitetime) {
     sessionStorage.setItem("sitetime", sitetime)
     loadApi("/api/inmuebles.json")
   }
