@@ -1,5 +1,6 @@
 <article class="inmueble excerpt">
   {% assign image = include.item.galley[0].image | split: '/' | last %}
+  {{ include.item.galley[0].image }}
   <picture>
     <source srcset="/assets/images/thumbs/{{ image }}" media="(min-width: 20em)">
     <source srcset="/assets/images/medium/{{ image }}" media="(min-width: 40em)">
