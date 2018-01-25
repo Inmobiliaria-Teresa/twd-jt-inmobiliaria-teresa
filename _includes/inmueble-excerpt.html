@@ -8,9 +8,15 @@
   </picture>
   <header>
     <h1>{{ include.item.title }}</h1>
+    <p>{{ include.item.address.city }}</p>
   </header>
-  <p>{{ include.item.address.city }}</p>
-  <p>{{ include.item.price | intcomma: '.' }} €{% unless include.item.status == 'Venta' %}/mes{% endunless %}</p>
-  <p><a href="{{ include.item.url | absolute_url }}">más info</a></p>
+  <div class="data">
+    <div class="precio">
+      <p>{{ include.item.price | intcomma: '.' }} €{% unless include.item.status == 'Venta' %}/mes{% endunless %}</p>
+    </div>
+  </div>
+  <div class="links">
+    <a href="{{ include.item.url | absolute_url }}">más info</a>
+  </div>
 
 </article>

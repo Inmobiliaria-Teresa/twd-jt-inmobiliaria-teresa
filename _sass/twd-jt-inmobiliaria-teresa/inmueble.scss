@@ -3,4 +3,38 @@
   margin-bottom: 0.5rem;
   width: 20%;
   min-width: 300px;
+  img {
+    width: 100%;
+  }
+  header {
+    text-align: center;
+  }
+  h1 {
+    font-size: 1.5rem;
+    line-height: 2;
+  }
+  .data,
+  .links {
+    padding: 1rem;
+  }
+  .data {
+    .precio {
+      font-size: 1.5rem;
+      line-height: 2;
+      font-weight: 700;
+      text-align: right;
+    }
+  }
+  .links {
+    a {
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: small;
+      color: $tone;
+      &:hover {
+        color: $base;
+      }
+    }
+  }
 }
