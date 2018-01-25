@@ -61,6 +61,7 @@ function loadJSON(file, callback) {
 function loadApi(file) {
   loadJSON(file, function(response) {
     sessionStorage.setItem("pisos", JSON.stringify(JSON.parse(response)))
+    updateSerachForm()
   })
 }
 
