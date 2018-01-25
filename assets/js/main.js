@@ -88,8 +88,8 @@ function updateSerachForm() {
   }
 
   let prices = [];
-  for (p in pisos) { prices.push(Number(pisos[p].precio)) }
-  prices.sort()
+  for (p in pisos) { prices.push(pisos[p].precio) }
+  prices.sort((a,b) => a - b)
   let minPrice = prices[0]
   let maxPrice = prices[prices.length - 1]
   let price = document.querySelector('#form-price')
