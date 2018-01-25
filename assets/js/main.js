@@ -36,12 +36,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
   if (!sessionStorage.hasOwnProperty("pisos")) {
     sessionStorage.setItem("sitetime", sitetime)
     loadApi("/api/inmuebles.json")
-  } else {
-    var pisos = JSON.parse(sessionStorage.getItem("pisos"))
-    let ventasSpan = document.querySelector("label[for='form-venta'] span")
-    ventasSpan.innerHTML = "(" + pisos.filter((piso) => piso.status === 'Venta').lenght +")"
-    let alquilerSpan = document.querySelector("label[for='form-alquiler'] span")
-    alquilerSpan.innerHTML = "(" + pisos.filter((piso) => piso.status === 'Alquiler').lenght +")"
   }
 
 });
@@ -62,7 +56,10 @@ function loadJSON(file, callback) {
 function loadApi(file) {
   loadJSON(file, function(response) {
     sessionStorage.setItem("pisos", JSON.stringify(JSON.parse(response)))
-    let vtas = document.querySelector("label[for='tipo1'] span")
-    vtas.innerHTML = JSON.parse(sessionStorage.getItem("pisos")).length
+    var pisos = JSON.parse(sessionStorage.getItem("pisos"))
+    let ventasSpan = document.querySelector("label[for='form-venta'] span")
+    ventasSpan.innerHTML = "(" + pisos.filter((piso) => piso.status === 'Venta').lenght +")"
+    let alquilerSpan = document.querySelector("label[for='form-alquiler'] span")
+    alquilerSpan.innerHTML = "(" + pisos.filter((piso) => piso.status === 'Alquiler').lenght +")"
   })
 }
