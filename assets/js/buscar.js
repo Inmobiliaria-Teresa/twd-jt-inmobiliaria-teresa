@@ -1,8 +1,14 @@
 document.addEventListener("DOMContentLoaded", function(event) {
 
   let params = getAllUrlParams()
+  params.cities = decodeURIComponent(params.cities).replace('+',' ')
+
+  let pisos = JSON.parse(sessionStorage.getItem("pisos"))
+  let pisosFilter = pisos.filter((p) => p.city == params.cities && p.precio >= params.price && p.status == params.tipo)
+
   console.log(params)
-  
+  console.log(pisosFilter)
+
 })
 
 function getAllUrlParams(url) {
