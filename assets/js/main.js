@@ -38,6 +38,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
     loadApi("/api/inmuebles.json")
   }
 
+  var pisos = JSON.parse(sessionStorage.getItem("pisos"))
+
   if (document.querySelector('#form-busqueda')) {
     updateSerachForm()
   }
@@ -65,7 +67,6 @@ function loadApi(file) {
 }
 
 function updateSerachForm() {
-  var pisos = JSON.parse(sessionStorage.getItem("pisos"))
 
   let ventasSpan = document.querySelector("label[for='form-venta'] span")
   ventasSpan.innerHTML = "(" + pisos.filter((piso) => piso.status === 'Venta').length +")"
@@ -96,10 +97,12 @@ function onlyUnique(value, index, self) {
 }
 
 function updateFormPrice() {
-  var pisos = JSON.parse(sessionStorage.getItem("pisos"))
+
   let tipo = document.querySelector('#form-tipo input:checked').value
   let prices = [];
-  for (p in pisos.filter((item) => item.status.toLowerCase() == tipo )) { prices.push(pisos[p].precio) }
+  let pisosFilter = pisos.filter((item) => item.status.toLowerCase() == tipo )
+
+  for (p in pisosFilter) { prices.push(pisosFilter[p].precio) }
   prices.sort((a,b) => a - b)
   let minPrice = prices[0]
   let maxPrice = prices[prices.length - 1]
