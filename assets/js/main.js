@@ -38,8 +38,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     loadApi("/api/inmuebles.json")
   }
 
-  var pisos = JSON.parse(sessionStorage.getItem("pisos"))
-
   if (document.querySelector('#form-busqueda')) {
     updateSerachForm()
   }
@@ -67,6 +65,8 @@ function loadApi(file) {
 }
 
 function updateSerachForm() {
+
+  let pisos = JSON.parse(sessionStorage.getItem("pisos"))
 
   let ventasSpan = document.querySelector("label[for='form-venta'] span")
   ventasSpan.innerHTML = "(" + pisos.filter((piso) => piso.status === 'Venta').length +")"
@@ -98,6 +98,7 @@ function onlyUnique(value, index, self) {
 
 function updateFormPrice() {
 
+  let pisos = JSON.parse(sessionStorage.getItem("pisos"))
   let tipo = document.querySelector('#form-tipo input:checked').value
   let prices = [];
   let pisosFilter = pisos.filter((item) => item.status.toLowerCase() == tipo )
