@@ -1,9 +1,9 @@
 <article class="inmueble excerpt">
   <header>
-    <h1>{{ params.item.title }}</h1>
+    <h1>{{ include.item.title }}</h1>
   </header>
-  <p>{{ params.item.address.city }}</p>
-  <p>{{ inmueble.price | intcomma: '.' }} €{% unless params.item.status == 'Venta' %}/mes{% endunless %}</p>
-  <p><a href="{{ inmueble.url | absolute_url }}">más info</a></p>
+  <p>{{ include.item.address.city }}</p>
+  <p>{{ include.item.price | intcomma: '.' }} €{% unless include.item.status == 'Venta' %}/mes{% endunless %}</p>
+  <p><a href="{{ include.item.url | absolute_url }}">más info</a></p>
 
 </article>
