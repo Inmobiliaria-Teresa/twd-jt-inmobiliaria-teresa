@@ -2,7 +2,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   let params = getAllUrlParams()
   console.log(params)
-}
+  
+})
 
 function getAllUrlParams(url) {
 
