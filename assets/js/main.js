@@ -64,8 +64,25 @@ function loadApi(file) {
 
 function updateSerachForm() {
   var pisos = JSON.parse(sessionStorage.getItem("pisos"))
+
   let ventasSpan = document.querySelector("label[for='form-venta'] span")
   ventasSpan.innerHTML = "(" + pisos.filter((piso) => piso.status === 'Venta').length +")"
+
   let alquilerSpan = document.querySelector("label[for='form-alquiler'] span")
   alquilerSpan.innerHTML = "(" + pisos.filter((piso) => piso.status === 'Alquiler').length +")"
+
+  let citiesList = document.querySelector("#form-cities")
+  let cities = []
+  for (p in pisos) { cities.push(pisos[p].city) }
+  let citiesUniq = cities.filter( onlyUnique )
+  let citiesUniq = citiesUniq.sort()
+  for (c in citiesUniq) {
+    let op = createElemet("option")
+    op.value = citiesUniq[c]
+    citiesList.addChild(op)
+  }
+}
+
+function onlyUnique(value, index, self) {
+    return self.indexOf(value) === index;
 }
