@@ -23,7 +23,12 @@ img {
 }
 
 .flex {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  float: left;
+}
+@supports (display: flex) {
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
