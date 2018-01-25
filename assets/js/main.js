@@ -87,6 +87,14 @@ function updateSerachForm() {
     citiesList.appendChild(op)
   }
 
+
+}
+
+function onlyUnique(value, index, self) {
+    return self.indexOf(value) === index;
+}
+
+function updateFormPrice() {
   let prices = [];
   for (p in pisos) { prices.push(pisos[p].precio) }
   prices.sort((a,b) => a - b)
@@ -96,8 +104,4 @@ function updateSerachForm() {
   price.setAttribute("min", minPrice)
   price.setAttribute("max", maxPrice)
   price.value = maxPrice
-}
-
-function onlyUnique(value, index, self) {
-    return self.indexOf(value) === index;
 }
