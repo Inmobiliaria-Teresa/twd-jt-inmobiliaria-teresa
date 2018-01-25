@@ -1,4 +1,7 @@
 .inmueble.excerpt {
   padding: 1rem;
-  flex: 1;
+  border: solid 1px $gray;
+  margin-bottom: 0.5rem;
+  width: 20%;
+  max-width: 300px;
 }
