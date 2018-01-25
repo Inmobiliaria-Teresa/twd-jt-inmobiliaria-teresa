@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   if (!sessionStorage.getItem("sitetime")) {
     sessionStorage.setItem("sitetime", sitetime)
     loadApi("/api/inmuebles.json")
+  }
 
   if (sessionStorage.getItem("sitetime") != sitetime) {
     sessionStorage.setItem("sitetime", sitetime)
