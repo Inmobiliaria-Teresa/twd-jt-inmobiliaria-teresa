@@ -111,4 +111,9 @@ function updateFormPrice() {
   price.setAttribute("min", minPrice)
   price.setAttribute("max", maxPrice)
   price.setAttribute("value", maxPrice)
+  updateFormPriceValue(maxPrice)
+}
+
+function updateFormPriceValue(vol) {
+	document.querySelector('#form-price-output').value = vol;
 }
