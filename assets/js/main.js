@@ -67,7 +67,7 @@ function loadApi(file) {
 function updateSerachForm() {
   var pisos = JSON.parse(sessionStorage.getItem("pisos"))
   let ventasSpan = document.querySelector("label[for='form-venta'] span")
-  ventasSpan.innerHTML = "(" + pisos.filter((piso) => piso.status === 'Venta').lenght +")"
+  ventasSpan.innerHTML = "(" + pisos.filter((piso) => piso.status === 'Venta').length +")"
   let alquilerSpan = document.querySelector("label[for='form-alquiler'] span")
-  alquilerSpan.innerHTML = "(" + pisos.filter((piso) => piso.status === 'Alquiler').lenght +")"
+  alquilerSpan.innerHTML = "(" + pisos.filter((piso) => piso.status === 'Alquiler').length +")"
 }
