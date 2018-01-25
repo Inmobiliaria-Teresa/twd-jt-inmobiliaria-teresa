@@ -1,5 +1,5 @@
-<form class="search" action="index.html" method="post">
-  <div><h4>Busca tu piso</h4></div>
+<form class="search" action="index.html" method="post" action="/inmuebles">
+  <div><h4>Encuentra tu piso</h4></div>
   <div>
     <input type="radio" id="form-venta"
      name="tipo" value="venta" checked>
@@ -13,7 +13,9 @@
   <label for="price">Precio máximo</label>
   <input type="range" name="price" min="100" max="500" value="250">
 
-  <input type="text" name="cities" list="form-cities" placeholder="Ciudad">
+  <input type="text" name="cities" list="form-cities" placeholder="Ciudad" autofocus>
   <datalist id="form-cities">
   </datalist>
+
+  <input type="submit" name="buscar" value="Buscar">
 </form>
