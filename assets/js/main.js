@@ -59,10 +59,14 @@ function loadJSON(file, callback) {
 function loadApi(file) {
   loadJSON(file, function(response) {
     sessionStorage.setItem("pisos", JSON.stringify(JSON.parse(response)))
-    var pisos = JSON.parse(sessionStorage.getItem("pisos"))
-    let ventasSpan = document.querySelector("label[for='form-venta'] span")
-    ventasSpan.innerHTML = "(" + pisos.filter((piso) => piso.status === 'Venta').lenght +")"
-    let alquilerSpan = document.querySelector("label[for='form-alquiler'] span")
-    alquilerSpan.innerHTML = "(" + pisos.filter((piso) => piso.status === 'Alquiler').lenght +")"
+    updateSerachForm()
   })
+}
+
+function updateSerachForm() {
+  var pisos = JSON.parse(sessionStorage.getItem("pisos"))
+  let ventasSpan = document.querySelector("label[for='form-venta'] span")
+  ventasSpan.innerHTML = "(" + pisos.filter((piso) => piso.status === 'Venta').lenght +")"
+  let alquilerSpan = document.querySelector("label[for='form-alquiler'] span")
+  alquilerSpan.innerHTML = "(" + pisos.filter((piso) => piso.status === 'Alquiler').lenght +")"
 }
