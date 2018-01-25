@@ -77,7 +77,7 @@ function updateSerachForm() {
   let citiesUniq = cities.filter( onlyUnique )
   citiesUniq = citiesUniq.sort()
   for (c in citiesUniq) {
-    let op = createElement("option")
+    let op = document.createElement("option")
     op.value = citiesUniq[c]
     citiesList.addChild(op)
   }
