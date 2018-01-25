@@ -37,8 +37,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
     sessionStorage.setItem("sitetime", sitetime)
     loadApi("/api/inmuebles.json")
   } else {
-    let vtas = document.querySelector("label[for='tipo1'] span")
-    vtas.innerHTML = JSON.parse(sessionStorage.getItem("pisos")).length
+    var pisos = JSON.parse(sessionStorage.getItem("pisos"))
+    let ventasSpan = document.querySelector("label[for='form-venta'] span")
+    ventasSpan.innerHTML = "(" + pisos.filter((piso) => piso.status === 'Venta').lenght +")"
+    let alquilerSpan = document.querySelector("label[for='form-alquiler'] span")
+    alquilerSpan.innerHTML = "(" + pisos.filter((piso) => piso.status === 'Alquiler').lenght +")"
   }
 
 });
