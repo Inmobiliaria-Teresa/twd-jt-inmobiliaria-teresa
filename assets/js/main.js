@@ -120,6 +120,7 @@ function updateFormPrice() {
   let input = document.createElement("input")
   input.setAttribute("id","form-price-slider")
   input.setAttribute("type","range")
+  input.setAttribute("name", "price")
   input.setAttribute("min",0)
   input.setAttribute("min", minPrice)
   input.setAttribute("max", maxPrice)
