@@ -4,7 +4,7 @@
 {% assign estado = include.item.status | downcase %}
 {% assign url = include.item.url %}
 {% assign habs = include.item.basic-data.rooms | strip %}
-{% assign baños = include.item.basic-data.baths | strip %}
+{% assign banos = include.item.basic-data.baths | strip %}
 {% assign area = include.item.basic-data.superficie-construida | strip %}
 {% assign imagen = include.item.gallery[0].image | split: '/' | last %}
 
@@ -15,7 +15,7 @@
          data-estado="{{ estado | downcase }}"
          data-url="{{ url }}"
          data-habs="{{ habs }}"
-         data-baños="{{ baños }}"
+         data-banos="{{ banos }}"
          data-area="{{ area }}">
 
   <picture>
@@ -37,8 +37,8 @@
         {% unless habs.size < 1 %}
         <li>{{ habs }} hab{% unless habs != 1 %}s{% endunless %}</li>
         {% endunless %}
-        {% unless baños.size < 1 %}
-        <li>{{ baños }} baño{% unless baños != 1 %}s{% endunless %}</li>
+        {% unless banos.size < 1 %}
+        <li>{{ banos }} baño{% unless banos != 1 %}s{% endunless %}</li>
         {% endunless %}
       </ul>
       <div class="precio">
