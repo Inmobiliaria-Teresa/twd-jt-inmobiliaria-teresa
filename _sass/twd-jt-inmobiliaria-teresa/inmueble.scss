@@ -15,17 +15,26 @@
     line-height: 2;
   }
   .data,
-  .links {
+  .links,
+  .precio {
     padding: 1rem;
   }
   .data {
-    .precio {
-      font-size: 1.5rem;
-      line-height: 2;
-      font-weight: 700;
-      text-align: right;
-      color: $base;
+    ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: space-around;
+      li {
+        flex: 1;
+      }
     }
+  }
+  .precio {
+    font-size: 1.5rem;
+    line-height: 2;
+    font-weight: 700;
+    text-align: right;
+    color: $base;
   }
   .links {
     a {
