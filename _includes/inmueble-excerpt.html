@@ -27,9 +27,9 @@
         <li>{{ include.item.basic-data.rooms }}</li>
         <li>{{ include.item.basic-data.baths }}</li>
       </ul>
-    </div>
-    <div class="precio">
-      <p>{{ include.item.price | intcomma: '.' }} €{% unless include.item.status == 'Venta' %}/mes{% endunless %}</p>
+      <div class="precio">
+        {{ include.item.price | intcomma: '.' }} €{% unless include.item.status == 'Venta' %}/mes{% endunless %}
+      </div>
     </div>
   </a>
   <div class="links">

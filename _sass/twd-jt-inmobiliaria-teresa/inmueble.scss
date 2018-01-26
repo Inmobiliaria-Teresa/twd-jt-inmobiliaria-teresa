@@ -6,12 +6,16 @@
   img {
     width: 100%;
   }
+  a {
+    text-decoration: none;
+    color: $tone;
+  }
   header {
-    text-align: center;
-    min-height: 7rem;
+    /*text-align: center;
+    min-height: 7rem;*/
   }
   h1 {
-    font-size: 1.5rem;
+    //font-size: 1.5rem;
     line-height: 1.5;
   }
   .data,
