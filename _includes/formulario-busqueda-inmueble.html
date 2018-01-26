@@ -17,7 +17,7 @@
            min="100"
            max="500"
            value="0"
-           oninput="updateFormPriceValue(value)">
+           oninput="updateFormPriceValue(value.toLocaleString('es-ES', {minimumFractionDigits: 0}))">
     <output for="form-price-slider" id="form-price-output">250</output>
   </div>
 
