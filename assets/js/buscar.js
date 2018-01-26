@@ -4,6 +4,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
   params.cities = decodeURIComponent(params.cities).replace('+',' ')
 
   let pisosDom = document.querySelectorAll('#listado-inmuebles article')
+  pisosDom.forEach((piso) => {
+    if(piso.dataset.status != params.tipo) {
+      piso.style.display = 'none'
+    }
+  })
   if (params.cities) {
     pisosDom.forEach((piso) => {
       if(piso.dataset.city != params.cities) {
