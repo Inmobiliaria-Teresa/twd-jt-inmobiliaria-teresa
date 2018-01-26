@@ -34,8 +34,12 @@
         {% unless area.size < 1 %}
         <li>{{ area }}m<sup>2</sup></li>
         {% endunless %}
+        {% unless habs.size < 1 %}
         <li>{{ habs }} hab{% unless habs != 1 %}s{% endunless %}</li>
+        {% endunless %}
+        {% unless baños.size < 1 %}
         <li>{{ baños }} baño{% unless baños != 1 %}s{% endunless %}</li>
+        {% endunless %}
       </ul>
       <div class="precio">
         {{ precio | intcomma: '.' }} €{% unless estado == 'venta' %}/mes{% endunless %}
