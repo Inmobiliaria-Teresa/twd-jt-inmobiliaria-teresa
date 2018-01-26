@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(event) {
 
-  var params = getAllUrlParams()
-  params.cities = decodeURIComponent(params.cities).replace('+',' ')
+  let params = getAllUrlParams()
 
   let pisosDom = document.querySelectorAll('#listado-inmuebles article')
   if (params.tipo) {
@@ -12,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     })
   }
   if (params.cities) {
+    params.cities = decodeURIComponent(params.cities).replace('+',' ')
     pisosDom.forEach((piso) => {
       if(piso.dataset.city != params.cities) {
         piso.style.display = 'none'
