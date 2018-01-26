@@ -1,34 +1,44 @@
+{% assign titulo = include.item.title %}
+{% assign ciudad = include.item.address.city %}
+{% assign precio = include.item.price %}
+{% assign estado = include.item.status | downcase %}
+{% assign url = include.item.url %}
+{% assign habs = include.item.basic-data.rooms %}
+{% assign baños = include.item.basic-data.baths %}
+{% assign area = include.item.basic-data.superficie-construida | strip %}
+{% assign imagen = include.item.gallery[0].image | split: '/' | last %}
+
+
 <article class="inmueble excerpt"
-         data-city="{{ include.item.address.city | downcase }}"
-         data-price="{{ include.item.price }}"
-         data-status="{{ include.item.status | downcase }}"
-         data-url="{{ include.item.url }}"
-         data-rooms="{{ include.item.basic-data.rooms }}"
-         data-baths="{{ include.item.basic-data.baths }}"
-         data-area="{{ include.item.basic-data.superficie-construida }}">
-  {% assign image = include.item.gallery[0].image | split: '/' | last %}
+         data-ciudad="{{ ciudad | downcase }}"
+         data-precio="{{ precio }}"
+         data-estado="{{ estado | downcase }}"
+         data-url="{{ url }}"
+         data-habs="{{ habs }}"
+         data-baños="{{ baños }}"
+         data-area="{{ area }}">
+
   <picture>
-    <source srcset="/assets/images/thumbs/{{ image }}" media="(min-width: 20em)">
-    <source srcset="/assets/images/medium/{{ image }}" media="(min-width: 40em)">
-    <source srcset="/assets/images/uploads/{{ image }}" media="(min-width: 50em)">
-    <img src="/assets/images/uploads/originales/{{ image }}" alt="{{ include.item.title }} - {{ include.item.address.city }}">
+    <source srcset="/assets/images/thumbs/{{ imagen }}" media="(min-width: 20em)">
+    <source srcset="/assets/images/medium/{{ imagen }}" media="(min-width: 40em)">
+    <source srcset="/assets/images/uploads/{{ imagen }}" media="(min-width: 50em)">
+    <img src="/assets/images/uploads/originales/{{ imagen }}" alt="{{ titulo }} - {{ ciudad }}">
   </picture>
-  <a href="{{ include.item.url | absolute_url }}">
+  <a href="{{ url | absolute_url }}">
     <header>
-      <h1>{{ include.item.title }}</h1>
-      <p>{{ include.item.address.city }}</p>
+      <h1>{{ titulo }}</h1>
+      <p>{{ ciudad }}</p>
     </header>
     <div class="data">
       <ul>
-        {% assign area = include.item.basic-data.superficie-construida | strip %}
         {% unless area.size < 1 %}
         <li>{{ area }}m<sup>2</sup></li>
         {% endunless %}
-        <li>{{ include.item.basic-data.rooms }} hab{% unless include.item.basic-data.rooms != 1 %}s{% endunless %}</li>
-        <li>{{ include.item.basic-data.baths }} baño{% unless include.item.basic-data.baths != 1 %}s{% endunless %}</li>
+        <li>{{ habs }} hab{% unless habs != 1 %}s{% endunless %}</li>
+        <li>{{ baños }} baño{% unless baños != 1 %}s{% endunless %}</li>
       </ul>
       <div class="precio">
-        {{ include.item.price | intcomma: '.' }} €{% unless include.item.status == 'Venta' %}/mes{% endunless %}
+        {{ precio | intcomma: '.' }} €{% unless estado == 'venta' %}/mes{% endunless %}
       </div>
     </div>
   </a>
