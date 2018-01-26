@@ -3,11 +3,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
   let params = getAllUrlParams()
   params.cities = decodeURIComponent(params.cities).replace('+',' ')
 
-  let pisosDom = document.querySelectorAll('#listado-inmuebles articles')
+  let pisosDom = document.querySelectorAll('#listado-inmuebles article')
   pisosDom.forEach((piso) => {
     if(piso.dataset.city != params.cities) {
       piso.style.display = 'none'
-      console.log("Hecho")
     }
   })
 
