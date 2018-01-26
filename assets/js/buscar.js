@@ -12,6 +12,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
   console.log(params)
   console.log(pisosFilter)
 
+  let pisosDom = document.querySelector('#listado-inmuebles')
+  
+
 })
 
 function getAllUrlParams(url) {

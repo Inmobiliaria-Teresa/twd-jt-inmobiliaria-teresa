@@ -1,4 +1,8 @@
-<article class="inmueble excerpt">
+<article class="inmueble excerpt"
+         data-city="{{ include.item.address.city | downcase}}"
+         data-price="{{ include.item.price }}"
+         data-status="{{ include.item.status }}"
+         data-url="{{ include.item.url }}">
   {% assign image = include.item.gallery[0].image | split: '/' | last %}
   <picture>
     <source srcset="/assets/images/thumbs/{{ image }}" media="(min-width: 20em)">
