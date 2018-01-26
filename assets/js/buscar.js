@@ -3,22 +3,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
   let params = getAllUrlParams()
   params.cities = decodeURIComponent(params.cities).replace('+',' ')
 
-/*
-  let pisos = JSON.parse(sessionStorage.getItem("pisos"))
-  let pisosFilter = pisos.filter((p) => p.precio >= params.price && p.status.toLowerCase() == params.tipo)
-  if (params.cities) {
-    pisosFilter= pisos.filter((p) => p.city.toLowerCase() == params.cities)
-  }
-
-  console.log(params)
-  console.log(pisosFilter)
-*/
-
   let pisosDom = document.querySelectorAll('#listado-inmuebles articles')
   pisosDom.forEach((piso) => {
-    if(piso.dataset.city == params.cities) {
-      piso.style.display = 'visible'
-    }  else {
+    if(piso.dataset.city != params.cities) {
       piso.style.display = 'none'
     }
   })
