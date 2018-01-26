@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   let params = getAllUrlParams()
   params.cities = decodeURIComponent(params.cities).replace('+',' ')
 
+/*
   let pisos = JSON.parse(sessionStorage.getItem("pisos"))
   let pisosFilter = pisos.filter((p) => p.precio >= params.price && p.status.toLowerCase() == params.tipo)
   if (params.cities) {
@@ -11,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   console.log(params)
   console.log(pisosFilter)
+*/
 
   let pisosDom = document.querySelectorAll('#listado-inmuebles articles')
   pisosDom.forEach((piso) => {
