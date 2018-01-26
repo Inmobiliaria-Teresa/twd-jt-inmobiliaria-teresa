@@ -19,7 +19,7 @@
   </header>
   <div class="data">
     <ul>
-      {% unless !include.item.basic-data.superficie-construida %}
+      {% unless include.item.basic-data.superficie-construida == blank %}
       <li>{{ include.item.basic-data.superficie-construida }}m<sup>2</sup></li>
       {% endunless %}
       <li>{{ include.item.basic-data.rooms }}</li>
