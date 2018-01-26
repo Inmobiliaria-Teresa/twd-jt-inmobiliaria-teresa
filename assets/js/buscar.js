@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   pisosDom.forEach((piso) => {
     if(piso.dataset.city != params.cities) {
       piso.style.display = 'none'
+      console.log("Hecho")
     }
   })
 
