@@ -2,6 +2,11 @@
   position: relative;
   width: 17rem;
   margin: 0 auto;
+  border-radius: 5px;
+  h4 {
+    line-height: 2;
+    text-align: center;
+  }
   .search {
     display: grid;
     width: 100%;
