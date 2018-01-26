@@ -13,6 +13,8 @@
   header {
     /*text-align: center;
     min-height: 7rem;*/
+    padding: 1rem 1rem 0.5rem;
+    min-height: 6rem;
   }
   h1 {
     //font-size: 1.5rem;
@@ -25,6 +27,7 @@
   .data {
     //background-color: $gray;
     min-height: 3rem;
+    padding: 0.5rem 1rem;
     ul {
       list-style-type: none;
       display: flex;
