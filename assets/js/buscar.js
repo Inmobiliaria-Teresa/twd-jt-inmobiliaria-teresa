@@ -10,6 +10,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
       }
     })
   }
+  if (params.price) {
+    pisosDom.forEach((piso) => {
+      if(piso.dataset.precio < params.price) {
+        piso.style.display = 'none'
+      }
+    })
+  }
   if (params.cities) {
     params.cities = decodeURIComponent(params.cities).replace('+',' ')
     pisosDom.forEach((piso) => {
