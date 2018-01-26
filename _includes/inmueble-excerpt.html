@@ -19,7 +19,9 @@
   </header>
   <div class="data">
     <ul>
-      {% unless include.item.basic-data.superficie-construida == "" %}
+      {% assign area = include.item.basic-data.superficie-construida | strip %}
+      {% if area == "" %}{% assign area = false %}{% endif %}
+      {% unless area %}
       <li>{{ include.item.basic-data.superficie-construida }}m<sup>2</sup></li>
       {% endunless %}
       <li>{{ include.item.basic-data.rooms }}</li>
