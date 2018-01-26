@@ -15,17 +15,18 @@
     line-height: 1.5;
   }
   .data,
-  .links,
-  .precio {
+  .links {
     padding: 1rem;
   }
   .data {
-    background-color: $gray;
+    //background-color: $gray;
     min-height: 3rem;
     ul {
       list-style-type: none;
       display: flex;
       justify-content: space-around;
+      text-align: center;
+      line-height: 1.5;
       li {
         flex: 1;
       }
