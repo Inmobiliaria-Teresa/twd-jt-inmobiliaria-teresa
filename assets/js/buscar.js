@@ -4,9 +4,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
   params.cities = decodeURIComponent(params.cities).replace('+',' ')
 
   let pisos = JSON.parse(sessionStorage.getItem("pisos"))
-  var pisosFilter = pisos.filter((p) => p.precio >= params.price && p.status.toLowerCase() == params.tipo)
+  let pisosFilter = pisos.filter((p) => p.precio >= params.price && p.status.toLowerCase() == params.tipo)
   if (params.cities) {
-    pisosFilter= pisos.filter(p.city.toLowerCase() == params.cities)
+    pisosFilter= pisos.filter((p) => p.city.toLowerCase() == params.cities)
   }
 
   console.log(params)
