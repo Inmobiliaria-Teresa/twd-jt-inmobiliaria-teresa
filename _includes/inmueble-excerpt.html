@@ -3,8 +3,8 @@
 {% assign precio = include.item.price %}
 {% assign estado = include.item.status | downcase %}
 {% assign url = include.item.url %}
-{% assign habs = include.item.basic-data.rooms %}
-{% assign baños = include.item.basic-data.baths %}
+{% assign habs = include.item.basic-data.rooms | strip %}
+{% assign baños = include.item.basic-data.baths | strip %}
 {% assign area = include.item.basic-data.superficie-construida | strip %}
 {% assign imagen = include.item.gallery[0].image | split: '/' | last %}
 
