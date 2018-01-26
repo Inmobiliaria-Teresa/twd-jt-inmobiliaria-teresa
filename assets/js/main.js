@@ -139,5 +139,5 @@ function updateFormPrice() {
 }
 
 function updateFormPriceValue(vol) {
-	document.querySelector('#form-price-output').setAttribute("value", vol.toLocaleString('es-ES', {minimumFractionDigits: 0}))
+	document.querySelector('#form-price-output').value = vol
 }
