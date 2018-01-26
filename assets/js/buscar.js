@@ -12,8 +12,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
   console.log(params)
   console.log(pisosFilter)
 
-  let pisosDom = document.querySelector('#listado-inmuebles')
-  
+  let pisosDom = document.querySelectorAll('#listado-inmuebles articles')
+  pisosDom.forEach((piso) => {
+    if(piso.dataset.city == params.cities) {
+      piso.style.display = 'visible'
+    }  else {
+      piso.style.display = 'none'
+    }
+  })
 
 })
 
