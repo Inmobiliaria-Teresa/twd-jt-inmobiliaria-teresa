@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   }
   if (params.price) {
     pisosDom.forEach((piso) => {
-      if(Number(piso.dataset.precio) < Number(params.price)) {
+      if(Number(piso.dataset.precio) > Number(params.price)) {
         piso.style.display = 'none'
       }
     })
