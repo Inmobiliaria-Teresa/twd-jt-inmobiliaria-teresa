@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   let pisosDom = document.querySelectorAll('#listado-inmuebles article')
   if (params.tipo) {
     pisosDom.forEach((piso) => {
-      if(piso.dataset.status != params.tipo) {
+      if(piso.dataset.estado != params.tipo) {
         piso.style.display = 'none'
       }
     })
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   if (params.cities) {
     params.cities = decodeURIComponent(params.cities).replace('+',' ')
     pisosDom.forEach((piso) => {
-      if(piso.dataset.city != params.cities) {
+      if(piso.dataset.ciudad != params.cities) {
         piso.style.display = 'none'
       }
     })
