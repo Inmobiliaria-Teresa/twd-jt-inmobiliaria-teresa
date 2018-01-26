@@ -3,9 +3,9 @@
          data-price="{{ include.item.price }}"
          data-status="{{ include.item.status | downcase }}"
          data-url="{{ include.item.url }}"
-         data-rooms="{{ include.item.rooms }}"
-         data-baths="{{ include.item.baths }}"
-         data-area="{{ include.item.superficie-construida }}">
+         data-rooms="{{ include.item.basic-data.rooms }}"
+         data-baths="{{ include.item.basic-data.baths }}"
+         data-area="{{ include.item.basic-data.superficie-construida }}">
   {% assign image = include.item.gallery[0].image | split: '/' | last %}
   <picture>
     <source srcset="/assets/images/thumbs/{{ image }}" media="(min-width: 20em)">
@@ -19,9 +19,9 @@
   </header>
   <div class="data">
     <ul>
-      <li>{{ include.item.superficie-construida }}m<sup>2</sup></li>
-      <li>{{ include.item.rooms }}</li>
-      <li>{{ include.item.baths }}</li>
+      <li>{{ include.item.basic-data.superficie-construida }}m<sup>2</sup></li>
+      <li>{{ include.item.basic-data.rooms }}</li>
+      <li>{{ include.item.basic-data.baths }}</li>
     </ul>
   </div>
   <div class="precio">
