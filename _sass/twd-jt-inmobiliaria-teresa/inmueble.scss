@@ -21,6 +21,7 @@
   }
   .data {
     background-color: $gray;
+    min-height: 3rem;
     ul {
       list-style-type: none;
       display: flex;
@@ -38,6 +39,7 @@
     color: $base;
   }
   .links {
+    text-align: right;
     a {
       text-transform: uppercase;
       text-decoration: none;
