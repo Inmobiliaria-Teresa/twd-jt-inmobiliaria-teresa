@@ -14,6 +14,17 @@ img {
   max-width: 100%;
 }
 
+sup,
+sub {
+	font-size: 0.6em;
+}
+sup {
+	vertical-align: super;
+}
+sub {
+	vertical-align: sub;
+}
+
 .page {
 	margin: 0 auto;
 	//max-width: 1160px;
