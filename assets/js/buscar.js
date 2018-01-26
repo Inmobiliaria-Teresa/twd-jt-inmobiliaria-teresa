@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(event) {
 
-  let params = getAllUrlParams()
+  var params = getAllUrlParams()
   params.cities = decodeURIComponent(params.cities).replace('+',' ')
 
   let pisosDom = document.querySelectorAll('#listado-inmuebles article')
