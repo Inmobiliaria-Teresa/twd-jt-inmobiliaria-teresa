@@ -140,6 +140,6 @@ function updateFormPrice() {
 
 function updateFormPriceValue(vol) {
   let tipo = document.querySelector('#form-tipo input:checked').value
-  let unidad = (tipo == 'ventas') ? ' €' : ' €/mes'
+  let unidad = (tipo == 'venta') ? ' €' : ' €/mes'
 	document.querySelector('#form-price-output').value = Number(vol).toLocaleString('es-ES', {minimumFractionDigits: 0}) + unidad
 }
