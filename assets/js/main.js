@@ -156,7 +156,7 @@ function bannerInit() {
   for (let i = 0; i < bannerNumImages; i++) {
     bannerBgPosition[i] = bannerSteps[3]
   }
-  bannerBgPosition[bannercurrentImage] = '0'
+  bannerBgPosition[bannerCurrentImage] = '0'
   banner.style.backgroundPosition = bannerBgPosition.join(',')
 
   var timer = setInterval(() => {
