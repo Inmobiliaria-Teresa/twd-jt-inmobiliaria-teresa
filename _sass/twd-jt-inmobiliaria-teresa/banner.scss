@@ -1,6 +1,7 @@
 .page.frontpage article header h1 {
   height: 500px;
-  background-image: url('/assets/images/front-background.jpg');
+  background-image: url('/assets/images/front-background.jpg'),
+                    url('/assets/images/front-background-2.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
