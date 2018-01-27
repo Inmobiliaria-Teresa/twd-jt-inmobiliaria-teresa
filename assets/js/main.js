@@ -153,7 +153,7 @@ function bannerInit() {
   var bannerNextImage = 1
   var bannerSteps = ['-100vw 0', '-100vw -150vh', '100vw -150vh', '100vw 0']
   var bannerBgPosition = []
-  for (let i = 0; i < bannerNumImages, i++) {
+  for (let i = 0; i < bannerNumImages; i++) {
     bannerBgPosition[i] = bannerSteps[3]
   }
   bannerBgPosition[bannercurrentImage] = '0'
