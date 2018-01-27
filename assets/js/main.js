@@ -42,6 +42,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
     updateSerachForm()
   }
 
+  bannerInit()
+
 });
 
 function loadJSON(file, callback) {
@@ -142,4 +144,32 @@ function updateFormPriceValue(vol) {
   let tipo = document.querySelector('#form-tipo input:checked').value
   let unidad = (tipo == 'venta') ? ' €' : ' €/mes'
 	document.querySelector('#form-price-output').value = Number(vol).toLocaleString('es-ES', {minimumFractionDigits: 0}) + unidad
+}
+
+function bannerInit() {
+  var banner = document.querySelector('.frontpage article header h1')
+  var bannerNumImages = banner.style.backgroundImage.spli(',').length
+  var bannerCurrentImage = 0
+  var bannerNextImage = 1
+  var bannerSteps = ['-100vw 0', '-100vw -150vh', '100vw -150vh', '100vw 0']
+  var bannerBgPosition = []
+  for (let i = 0; i < bannerNumImages, i++) {
+    bannerBgPosition[i] = bannerSteps[3]
+  }
+  bannerBgPosition[bannercurrentImage] = '0'
+  banner.style.backgroundPosition = bannerBgPosition.join(',')
+
+  var timer = setInterval(() => {
+    for (let i = 0; i < bannerSteps.length; i++) {
+      bannerBgPosition[bannerCurrentImage] = bannerSteps[i]
+      bannerBgPosition[bannerNextImage] = '0'
+      banner.style.backgroundPosition = bannerBgPosition.join(',')
+    }
+    bannerCurrentImage += 1
+    if (bannerCurrentImage > bannerNumImages) {
+      bannerCurrentImage = 0
+    }
+    bannerNextImage = bannerCurrentImage + 1
+
+  }, 5000)
 }
