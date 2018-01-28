@@ -165,13 +165,13 @@ function bannerInit() {
       bannerBgPosition[bannerNextImage] = '0'
       banner.style.backgroundPosition = bannerBgPosition.join(',')
     }
-    bannerCurrentImage += 1
+    bannerCurrentImage++
+    bannerNextImage++
     if (bannerCurrentImage > bannerNumImages) {
       bannerCurrentImage = 0
     }
     if (bannerNextImage > bannerNumImages) {
       bannerNextImage = 0
     }
-
   }, 5000)
 }
