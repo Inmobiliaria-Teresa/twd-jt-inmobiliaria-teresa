@@ -165,6 +165,7 @@ function bannerInit() {
       bannerBgPosition[bannerCurrentImage] = bannerSteps[i]
       bannerBgPosition[bannerNextImage] = '0'
       banner.style.backgroundPosition = bannerBgPosition.join(',')
+      console.log(bannerBgPosition)
     }
     bannerCurrentImage++
     bannerNextImage++
