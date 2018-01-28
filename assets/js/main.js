@@ -166,6 +166,7 @@ function bannerInit() {
       bannerBgPosition[bannerNextImage] = '0'
       banner.style.backgroundPosition = bannerBgPosition.join(',')
       console.log(bannerBgPosition)
+      console.log(bannerCurrentImage + " : " + bannerNextImage)
     }
     bannerCurrentImage++
     bannerNextImage++
