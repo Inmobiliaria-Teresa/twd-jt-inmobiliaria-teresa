@@ -153,13 +153,15 @@ function bannerInit() {
   var bannerNextImage = 1
   var bannerSteps = ['-100vw 0', '-100vw -150vh', '100vw -150vh', '100vw 0']
   var bannerBgPosition = []
+
   for (let i = 0; i < bannerNumImages + 1; i++) {
     if (i != bannerCurrentImage) {
       bannerBgPosition[i] = bannerSteps[3]
     }
   }
+  bannerBgPosition[0] = '0'
   banner.style.backgroundPosition = bannerBgPosition.join(',')
-  console.log(banner.style.backgroundPosition)
+  console.log(bannerBgPosition)
 
   var timer = setInterval(() => {
     for (let i = 0; i < bannerSteps.length; i++) {
