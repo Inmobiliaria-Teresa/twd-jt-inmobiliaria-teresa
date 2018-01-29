@@ -164,9 +164,8 @@ function bannerInit() {
     for (let i = 0; i < bannerSteps.length; i++) {
       bannerBgPosition[bannerCurrentImage] = bannerSteps[i]
       bannerBgPosition[bannerNextImage] = '0'
+      banner.style.transition = '0.2s ease-in'
       banner.style.backgroundPosition = bannerBgPosition.join(',')
-      console.log(bannerBgPosition)
-      console.log(bannerCurrentImage + " : " + bannerNextImage)
     }
     bannerCurrentImage++
     bannerNextImage++
