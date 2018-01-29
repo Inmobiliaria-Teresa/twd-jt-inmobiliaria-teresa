@@ -147,7 +147,7 @@ function updateFormPriceValue(vol) {
 }
 
 function bannerInit() {
-  var banner = document.querySelector('.frontpage article header h1')
+  /*var banner = document.querySelector('.frontpage article header h1')
   var bannerNumImages = window.getComputedStyle(banner).backgroundImage.split(',').length
   var bannerCurrentImage = 0
   var bannerNextImage = 1
@@ -177,5 +177,5 @@ function bannerInit() {
     if (bannerNextImage > bannerNumImages - 1) {
       bannerNextImage = 0
     }
-  }, 5000)
+  }, 5000)*/
 }
