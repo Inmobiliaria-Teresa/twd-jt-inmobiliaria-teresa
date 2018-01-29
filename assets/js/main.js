@@ -157,6 +157,7 @@ function bannerInit() {
   for (let i = 0; i < bannerNumImages + 1; i++) {
     if (i != bannerCurrentImage) {
       bannerBgPosition[i] = bannerSteps[3]
+      console.log(bannerBgPosition)
     }
   }
   bannerBgPosition[0] = '0'
