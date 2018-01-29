@@ -147,23 +147,20 @@ function updateFormPriceValue(vol) {
 }
 
 function bannerInit() {
-  /*var banner = document.querySelector('.frontpage article header h1')
-  var bannerNumImages = banner.style.backgroundImage.split(',').length
-  bannerNumImages--
-  console.log(bannerNumImages)
+  var banner = document.querySelector('.frontpage article header h1')
+  var bannerNumImages = window.getComputedStyle(banner).backgroundImage.split(',').length
   var bannerCurrentImage = 0
   var bannerNextImage = 1
   var bannerSteps = ['-100vw 0', '-100vw -150vh', '100vw -150vh', '100vw 0']
   var bannerBgPosition = []
 
-  for (let i = 0; i < (bannerNumImages + 1); i++) {
+  for (let i = 0; i < bannerNumImages; i++) {
     if (i != bannerCurrentImage) {
       bannerBgPosition[i] = bannerSteps[3]
     }
   }
   bannerBgPosition[0] = '0'
   banner.style.backgroundPosition = bannerBgPosition.join(',')
-  console.log(bannerBgPosition)
 
   var timer = setInterval(() => {
     for (let i = 0; i < bannerSteps.length; i++) {
@@ -174,11 +171,11 @@ function bannerInit() {
     }
     bannerCurrentImage++
     bannerNextImage++
-    if (bannerCurrentImage > bannerNumImages) {
+    if (bannerCurrentImage > bannerNumImages - 1) {
       bannerCurrentImage = 0
     }
-    if (bannerNextImage > bannerNumImages) {
+    if (bannerNextImage > bannerNumImages - 1) {
       bannerNextImage = 0
     }
-  }, 5000)*/
+  }, 5000)
 }
