@@ -161,7 +161,7 @@ function bannerInit() {
   banner.style.backgroundPosition = bannerBgPosition.join(',')
 
   var timer = setInterval(() => {
-    for (let i = 0; i < bannerSteps.length; i++) {
+    /*for (let i = 0; i < bannerSteps.length; i++) {
       bannerBgPosition[bannerCurrentImage] = bannerSteps[i]
       bannerBgPosition[bannerNextImage] = '0'
       banner.style.transition = '0.2s ease-in'
@@ -174,6 +174,6 @@ function bannerInit() {
     }
     if (bannerNextImage > bannerNumImages) {
       bannerNextImage = 0
-    }
+    }*/
   }, 5000)
 }
