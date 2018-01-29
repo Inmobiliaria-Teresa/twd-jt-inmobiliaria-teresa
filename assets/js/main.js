@@ -148,7 +148,8 @@ function updateFormPriceValue(vol) {
 
 function bannerInit() {
   var banner = document.querySelector('.frontpage article header h1')
-  var bannerNumImages = banner.style.backgroundImage.split(',').length - 1
+  var bannerNumImages = banner.style.backgroundImage.split(',').length
+  bannerNumImages--
   console.log(bannerNumImages)
   var bannerCurrentImage = 0
   var bannerNextImage = 1
