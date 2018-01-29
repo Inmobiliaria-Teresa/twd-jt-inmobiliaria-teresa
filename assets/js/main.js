@@ -149,16 +149,15 @@ function updateFormPriceValue(vol) {
 function bannerInit() {
   var banner = document.querySelector('.frontpage article header h1')
   var bannerNumImages = banner.style.backgroundImage.split(',').length - 1
+  console.console.log(bannerNumImages)
   var bannerCurrentImage = 0
   var bannerNextImage = 1
   var bannerSteps = ['-100vw 0', '-100vw -150vh', '100vw -150vh', '100vw 0']
   var bannerBgPosition = []
 
   for (let i = 0; i < (bannerNumImages + 1); i++) {
-    console.log(i + ':' + bannerNumImages)
     if (i != bannerCurrentImage) {
       bannerBgPosition[i] = bannerSteps[3]
-      console.log(bannerBgPosition)
     }
   }
   bannerBgPosition[0] = '0'
