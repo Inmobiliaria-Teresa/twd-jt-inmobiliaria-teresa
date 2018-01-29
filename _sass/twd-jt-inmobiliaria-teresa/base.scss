@@ -45,7 +45,7 @@ sub {
   .flex {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-evenly;
+    justify-content: space-evenly;
     width: 100%
   }
 }
