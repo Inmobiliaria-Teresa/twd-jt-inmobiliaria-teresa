@@ -159,6 +159,7 @@ function bannerInit() {
     }
   }
   banner.style.backgroundPosition = bannerBgPosition.join(',')
+  console.log(banner.style.backgroundPosition)
 
   var timer = setInterval(() => {
     for (let i = 0; i < bannerSteps.length; i++) {
