@@ -153,7 +153,7 @@ function bannerInit() {
   var bannerNextImage = 1
   var bannerSteps = ['-100vw 0', '-100vw -150vh', '100vw -150vh', '100vw 0']
   var bannerBgPosition = []
-  for (let i = 0; i < bannerNumImages; i++) {
+  for (let i = 0; i < bannerNumImages + 1; i++) {
     if (i != bannerCurrentImage) {
       bannerBgPosition[i] = bannerSteps[3]
     }
@@ -161,7 +161,7 @@ function bannerInit() {
   banner.style.backgroundPosition = bannerBgPosition.join(',')
 
   var timer = setInterval(() => {
-    /*for (let i = 0; i < bannerSteps.length; i++) {
+    for (let i = 0; i < bannerSteps.length; i++) {
       bannerBgPosition[bannerCurrentImage] = bannerSteps[i]
       bannerBgPosition[bannerNextImage] = '0'
       banner.style.transition = '0.2s ease-in'
@@ -174,6 +174,6 @@ function bannerInit() {
     }
     if (bannerNextImage > bannerNumImages) {
       bannerNextImage = 0
-    }*/
+    }
   }, 5000)
 }
